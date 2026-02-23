@@ -1,7 +1,5 @@
-<div class="paper-tile">
-  <div class="paper-tile-title">
-    <a href="/papers/{{ include.pub.id }}/">{{ include.pub.title }}</a>
-  </div>
+<a class="paper-tile" href="/papers/{{ include.pub.id }}/">
+  <div class="paper-tile-title">{{ include.pub.title }}</div>
   <div class="paper-tile-authors">
     {% for author in include.pub.authors %}
       {% if author contains "Greenhalgh" %}<strong>{{ author }}</strong>{% else %}{{ author }}{% endif %}{% unless forloop.last %}, {% endunless %}
@@ -10,8 +8,7 @@
   <div class="paper-tile-venue">
     <em>{{ include.pub.venue }}</em>, {{ include.pub.year }}
     {% if include.pub.doi != "" %}
-      &nbsp;&bull;&nbsp;
-      <a href="https://doi.org/{{ include.pub.doi }}">DOI</a>
+      &nbsp;&bull;&nbsp;DOI: {{ include.pub.doi }}
     {% endif %}
   </div>
-</div>
+</a>

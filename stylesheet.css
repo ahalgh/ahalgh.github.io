@@ -143,25 +143,46 @@ span.highlight {
 
 /* ── Paper tiles ──────────────────────────────────────────── */
 .paper-tile {
-  padding: 10px 16px;
-  margin-bottom: 10px;
-  border-left: 3px solid #1772d0;
+  display: block;
+  padding: 14px 16px;
+  margin: 0 8px 12px;
+  border: 1px solid #e0e0e0;
+  border-left: 4px solid #1772d0;
+  border-radius: 4px;
+  background: #fafafa;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.15s ease, border-left-color 0.15s ease, background 0.15s ease;
+  cursor: pointer;
+}
+
+.paper-tile:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  border-left-color: #f09228;
+  background: #fff;
+  text-decoration: none;
+  color: inherit;
 }
 
 .paper-tile-title {
   font-weight: 700;
   font-size: 14px;
-  margin-bottom: 3px;
+  margin-bottom: 4px;
+  color: #1772d0;
+}
+
+.paper-tile:hover .paper-tile-title {
+  color: #f09228;
 }
 
 .paper-tile-authors {
   font-size: 13px;
   color: #444;
-  margin-bottom: 2px;
+  margin-bottom: 3px;
 }
 
 .paper-tile-venue {
-  font-size: 13px;
+  font-size: 12px;
   color: #666;
 }
 
