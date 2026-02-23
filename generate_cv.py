@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generate cv.html (and optionally CV_AG.pdf) from cv_data.yaml + cv_template.html.
+Generate cv.html (and optionally CV_AG.pdf) from data/*.yaml + cv_template.html.
 
 Usage:
     python generate_cv.py           # generates cv.html
@@ -9,6 +9,19 @@ Usage:
 Dependencies (install once):
     pip install pyyaml jinja2
     pip install weasyprint          # optional, for --pdf flag
+
+To update the CV, edit the relevant file in data/ and re-run this script
+(or just push — GitHub Actions will run it automatically):
+
+    data/personal.yaml      — name, contact info
+    data/education.yaml     — degrees
+    data/honors.yaml        — awards and honors
+    data/experience.yaml    — jobs and research positions
+    data/projects.yaml      — course/personal projects
+    data/training.yaml      — courses and certifications
+    data/skills.yaml        — languages and software
+    data/publications.yaml  — journal articles
+    data/presentations.yaml — oral and poster presentations
 """
 
 import sys
@@ -17,6 +30,19 @@ from jinja2 import Environment, FileSystemLoader
 from pathlib import Path
 
 ROOT = Path(__file__).parent
+DATA = ROOT / "data"
+
+SECTIONS = [
+    "personal",
+    "education",
+    "honors",
+    "experience",
+    "projects",
+    "training",
+    "skills",
+    "publications",
+    "presentations",
+]
 
 
 def bold_name(text: str) -> str:
@@ -34,10 +60,12 @@ def bold_name(text: str) -> str:
 def main():
     want_pdf = "--pdf" in sys.argv
 
-    # ── Load data ──────────────────────────────────────────────────────────
-    data_path = ROOT / "cv_data.yaml"
-    with open(data_path, encoding="utf-8") as f:
-        data = yaml.safe_load(f)
+    # ── Load each section from its own file ───────────────────────────────
+    data = {}
+    for section in SECTIONS:
+        path = DATA / f"{section}.yaml"
+        with open(path, encoding="utf-8") as f:
+            data[section] = yaml.safe_load(f)
 
     # ── Render HTML ────────────────────────────────────────────────────────
     env = Environment(loader=FileSystemLoader(str(ROOT)))

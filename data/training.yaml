@@ -1,0 +1,6 @@
+- institution: "Army Logistics University"
+  program: "ORSA Military Applications Course"
+  date: "Fall 2023"
+  bullets:
+    - "14 Week Training covering foundations of military operations research."
+    - "Operational combat modeling, stochastic simulation, data analysis, probability/statistics."

@@ -1,0 +1,18 @@
+journal:
+  - authors: "Kizzire, D.G., Greenhalgh, A.D., Neveau, M.L., Pekol, C.M., Thompson, M.J., Rios, O., Keffer, D.J."
+    title: "Modified Embedded Atom Method Interatomic Potential for FCC γ-Cerium"
+    venue: "Computational Materials Science"
+    details: "230, article #112454, 2023, pp. 1–9"
+    doi: "10.1016/j.commatsci.2023.112454"
+
+  - authors: "Greenhalgh, A.D., Sanjeewa, L.D., Luszczek, P., Maroulas, V., Rios, O., Keffer, D.J."
+    title: "Assessment of Local Observation of Atomic Ordering in Alloys via the Radial Distribution Function: A Computational and Experimental Approach"
+    venue: "Frontiers in Materials"
+    details: "December 2021"
+    doi: ""
+
+  - authors: "Biewer, T., Smith, C., Gebhart, T., Greenhalgh, A.D., Ren, X., Thomas, C."
+    title: "Considerations for in situ, real time measurement of plasma-material interactions using Digital Holographic imaging"
+    venue: "Journal of Instrumentation"
+    details: "15(2), C02017, February 2020"
+    doi: ""

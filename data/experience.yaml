@@ -1,0 +1,24 @@
+- title: "Operations Research Analyst"
+  organization: "Maneuver Division – The Research and Analysis Center, Army Futures Command"
+  dates: "June 2022 – Aug. 2022; July 2023 – Sept. 2025"
+  bullets:
+    - "Developed operational combat models for simulation in Python with Apache SVN version control in Linux environment."
+    - "Designed and built a large language model chatbot in Python for tactical Q&A using LangChain for vector embeddings and OpenAI API. Model trained on Army Doctrine Manuals scraped with BeautifulSoup."
+    - "Performed Design of Experiments to compare the effectiveness of several combat vehicle platforms through combat modeling. Results presented to Army leadership and used to inform Pentagon G-8 billion-dollar yearly acquisition budget."
+    - "Built interactive visualization dashboards in Bokeh package in Python to convey operational modeling results to Army Senior Leaders."
+
+- title: "Computational Material Science Researcher"
+  organization: "Advisor: Prof. David Keffer and Dr. Dayton Kizzire, UT-MSE"
+  dates: "Oct. 2019 – May 2023"
+  bullets:
+    - "Research project #1: Developed method to statistically characterize chemical ordering in Atom Probe Tomography (APT) data sets of high entropy alloys. Created MATLAB program to visualize and quantify atomic ordering via Radial Distribution Function; analyzed APT data from ORNL to display nanoprecipitates in High Entropy Alloys."
+    - "Research project #2: Classical Molecular Dynamics simulations using LAMMPS on ISAAC HPC cluster to generate thermodynamic, mechanical, and transport properties for Aluminum and aluminum alloy Mg12Al17."
+    - "Research project #3: Automated interatomic potential property calculations with Python (NumPy, matplotlib, mpi4py) and VASP. Developed novel ML optimization algorithm to parameterize and discover Cerium interatomic potential."
+
+- title: "DOE Science Undergraduate Laboratory Intern"
+  organization: "Advisor: Dr. Yuanpeng Zhang, Oak Ridge National Laboratory"
+  dates: "June 2021 – Aug. 2021"
+  bullets:
+    - "Continued development of the ADvanced DIffraction Environment (ADDIE), a GUI integrating the NOMAD Diffractometer into the Mantid framework at the Spallation Neutron Source."
+    - "Enabled access of raw neutron data to a scientific community of 1,000 yearly experimental SNS users with open-source project."
+    - "Integrated PyQt GUI data with backend Neutron Diffraction Fourier Transform codes for data reduction."

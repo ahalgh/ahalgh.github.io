@@ -1,0 +1,26 @@
+- institution: "Georgia Institute of Technology"
+  degree: "M.S. in Computer Science"
+  department: "Machine Learning Concentration"
+  dates: "Aug. 2023 – May 2025"
+  gpa: "4.00/4.00"
+  bullets:
+    - "Coursework: Machine Learning, Deep Learning, Graduate Algorithms."
+    - "Academic Integrity TA: Machine Learning for Trading, Software Development/Architecture Processes."
+
+- institution: "New Mexico State University"
+  degree: "M.Eng. in Industrial Engineering"
+  department: "Department of Industrial Engineering"
+  dates: "Aug. 2023 – Dec. 2024"
+  gpa: "4.00/4.00"
+  bullets:
+    - "Coursework: Linear Programming, Stochastic Simulation, Optimization."
+    - "ORSA Military Applications Course: 14 Week Operations Research Training at Army Logistics University."
+
+- institution: "The University of Tennessee"
+  degree: "B.S. Materials Science and Engineering"
+  department: "Minors: Computer Science and Mathematics"
+  dates: "Aug. 2019 – May 2023"
+  gpa: "3.88/4.00"
+  bullets:
+    - "Coursework: Materials, Thermodynamics, Algorithms, Scientific Computing, Machine Learning."
+    - "Additional: Summa Cum Laude, Distinction in Undergraduate Research, Cook Grand Challenge Honors."

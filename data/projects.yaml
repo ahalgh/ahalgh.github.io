@@ -1,0 +1,16 @@
+- title: "High-Entropy Alloy Strength Prediction"
+  date: "Spring 2023"
+  bullets:
+    - "XGBoost model for joint optimization of yield strength and ductility. Testing accuracy of 90.1%."
+    - "Trained on High-Entropy Alloy Database extracted from experimental literature."
+
+- title: "Language Translation Task"
+  date: "Fall 2023"
+  bullets:
+    - "Implementation of LSTM, Seq2Seq, and Transformer Architectures with PyTorch for English to German Translation Task."
+    - "Transformer Attention mechanism from Vaswani et al.'s 'Attention Is All You Need'. Trained on dataset of 31,014 sentences with testing perplexity of 4.81."
+
+- title: "Autonomous AI Algorithms"
+  date: "Spring 2024"
+  bullets:
+    - "A-star, PID control, Particle/Kalman Filters, Simultaneous Localization and Mapping (SLAM)."

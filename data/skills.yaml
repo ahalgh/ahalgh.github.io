@@ -1,0 +1,4 @@
+languages: "Python (PyTorch, NumPy, Pandas, sklearn), C++, R, MATLAB, Linux, Bash, JavaScript, FORTRAN, Git"
+software:
+  - "LAMMPS Classical Molecular Dynamics Software"
+  - "OVITO Molecular Visualization Software"

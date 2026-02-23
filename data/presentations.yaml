@@ -1,0 +1,73 @@
+oral:
+  - authors: "Sanjeewa, L.D., Greenhalgh, A., Rios, O., Luszczek, P., Maroulas, V., Keffer, D.J."
+    title: "Local Observation of Atomic ordering in Alloys via the Radial Distribution Function: A Computational and Experimental Approach"
+    venue: "SIAM Conference on Mathematical Aspects of Materials Science – MS 21"
+    location: "Madrid (virtual)"
+    date: "May 2021"
+
+  - authors: "Keffer, D.J., Spannaus, A., Greenhalgh, A., Maroulas, V., Luszczek, P., Liaw, P.K."
+    title: "Generating Intermolecular Potentials from Atom Probe Tomography Experiments"
+    venue: "AIChE Annual Meeting"
+    location: "San Francisco, CA"
+    date: "Nov. 2020"
+
+poster:
+  - authors: "Alex Greenhalgh, Kylie Berry, Makenna Curcuru, Jonathan Landry, Baldur Steingrimsson, Peter Liaw"
+    title: "Optimization of Refractory High-Entropy Alloy Strength and Ductility through a Predictive Development Process"
+    venue: "International Conference on High-Entropy Materials"
+    location: "Knoxville, TN"
+    date: "June 2023"
+
+  - authors: "Alex Greenhalgh, Dayton Kizzire, David Keffer"
+    title: "Modified embedded atom method atomic potential for pure Cerium to facilitate AlCe characterization"
+    venue: "EUReCA Research Poster Contest"
+    location: "Knoxville, TN"
+    date: "April 2023"
+
+  - authors: "Alex Greenhalgh, Dayton Kizzire, David Keffer"
+    title: "Modified embedded atom method atomic potential for pure Cerium to facilitate AlCe characterization"
+    venue: "Center for Materials Processing Student Poster Night"
+    location: "Knoxville, TN"
+    date: "February 2023"
+
+  - authors: "Alex Greenhalgh, David Keffer"
+    title: "Assessment of Atomic Ordering in Alloys"
+    venue: "ASM International Oak Ridge Chapter Student Poster Night"
+    location: "Knoxville, TN"
+    date: "April 2022"
+
+  - authors: "Alex Greenhalgh, David Keffer"
+    title: "Assessment of Atomic Ordering in Alloys"
+    venue: "ASM International Oak Ridge Chapter Student Poster Night"
+    location: "Knoxville, TN"
+    date: "February 2022"
+
+  - authors: "Alex Greenhalgh, Yuanpeng Zhang"
+    title: "A New Data Reduction Environment for Neutron Diffraction Data"
+    venue: "ORNL SULI Poster Session"
+    location: "Oak Ridge, TN"
+    date: "August 2021"
+
+  - authors: "Alex Greenhalgh, David Keffer"
+    title: "Energy and Entropy of Defect Formation in Crystalline Solids"
+    venue: "EUReCA Research Poster Contest"
+    location: "Knoxville, TN"
+    date: "April 2021"
+
+  - authors: "Alex Greenhalgh, David Keffer"
+    title: "Material Properties through LAMMPS Molecular Dynamics Simulation"
+    venue: "ASM International Oak Ridge Chapter Student Poster Night"
+    location: "Knoxville, TN"
+    date: "October 2020"
+
+  - authors: "Alex Greenhalgh, David Keffer"
+    title: "Visualization and Metrics of Atomic Ordering"
+    venue: "EUReCA Research Poster Contest"
+    location: "Knoxville, TN"
+    date: "April 2020"
+
+  - authors: "Alex Greenhalgh, Theodore Biewer"
+    title: "Simulation of Surface Damage by Laser Ablation to Material Targets as Proxy for Plasma Exposure Erosion"
+    venue: "ORNL Undergraduate Poster Session"
+    location: "Oak Ridge, TN"
+    date: "August 2019"
