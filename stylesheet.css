@@ -140,3 +140,111 @@ span.highlight {
     display: inline-block;
     border-radius: 10px;
 }
+
+/* ── Paper tiles ──────────────────────────────────────────── */
+.paper-tile {
+  padding: 10px 16px;
+  margin-bottom: 10px;
+  border-left: 3px solid #1772d0;
+}
+
+.paper-tile-title {
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+
+.paper-tile-authors {
+  font-size: 13px;
+  color: #444;
+  margin-bottom: 2px;
+}
+
+.paper-tile-venue {
+  font-size: 13px;
+  color: #666;
+}
+
+/* ── CV styles ────────────────────────────────────────────── */
+.cv-section {
+  margin-bottom: 18px;
+  padding: 0 16px;
+}
+
+.cv-section h2 {
+  font-size: 16px;
+  font-weight: 700;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 4px;
+  margin-bottom: 8px;
+}
+
+.cv-entry {
+  margin-bottom: 10px;
+}
+
+.cv-entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.cv-institution {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.cv-dates {
+  font-size: 12px;
+  color: #555;
+  white-space: nowrap;
+}
+
+.cv-entry-sub {
+  font-size: 13px;
+  color: #333;
+  font-style: italic;
+  margin-bottom: 2px;
+}
+
+.cv-entry ul {
+  margin: 4px 0 0 0;
+  padding-left: 18px;
+}
+
+.cv-entry ul li {
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+
+.cv-pub {
+  margin-bottom: 8px;
+}
+
+.cv-pub-title {
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.cv-pub-authors {
+  font-size: 12px;
+  color: #444;
+}
+
+.cv-pub-venue {
+  font-size: 12px;
+  color: #666;
+  font-style: italic;
+}
+
+.cv-skill-row {
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+/* ── Print: hide nav ──────────────────────────────────────── */
+@media print {
+  nav { display: none !important; }
+  body { font-size: 11px; }
+  .cv-section h2 { font-size: 13px; }
+}

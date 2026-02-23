@@ -1,0 +1,54 @@
+- id: cerium-potential
+  type: journal
+  featured: true
+  title: "Modified Embedded Atom Method Interatomic Potential for FCC γ-Cerium"
+  authors:
+    - "Kizzire, D.G."
+    - "Greenhalgh, A.D."
+    - "Neveau, M.L."
+    - "Pekol, C.M."
+    - "Thompson, M.J."
+    - "Rios, O."
+    - "Keffer, D.J."
+  year: 2023
+  venue: "Computational Materials Science"
+  details: "230, article #112454, 2023, pp. 1–9"
+  doi: "10.1016/j.commatsci.2023.112454"
+  abstract: ""
+  image: ""
+
+- id: atomic-ordering
+  type: journal
+  featured: true
+  title: "Assessment of Local Observation of Atomic Ordering in Alloys via the Radial Distribution Function: A Computational and Experimental Approach"
+  authors:
+    - "Greenhalgh, A.D."
+    - "Sanjeewa, L.D."
+    - "Luszczek, P."
+    - "Maroulas, V."
+    - "Rios, O."
+    - "Keffer, D.J."
+  year: 2021
+  venue: "Frontiers in Materials"
+  details: "December 2021"
+  doi: ""
+  abstract: ""
+  image: ""
+
+- id: holographic-imaging
+  type: journal
+  featured: true
+  title: "Considerations for in situ, real time measurement of plasma-material interactions using Digital Holographic imaging"
+  authors:
+    - "Biewer, T."
+    - "Smith, C."
+    - "Gebhart, T."
+    - "Greenhalgh, A.D."
+    - "Ren, X."
+    - "Thomas, C."
+  year: 2020
+  venue: "Journal of Instrumentation"
+  details: "15(2), C02017, February 2020"
+  doi: ""
+  abstract: ""
+  image: ""

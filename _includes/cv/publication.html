@@ -1,0 +1,10 @@
+<div class="cv-pub">
+  <div class="cv-pub-authors">{{ include.pub.authors | join: ", " }}</div>
+  <div class="cv-pub-title">&ldquo;{{ include.pub.title }}&rdquo;</div>
+  <div>
+    <span class="cv-pub-venue">{{ include.pub.venue }}</span>, {{ include.pub.details }}.
+    {% if include.pub.doi != "" %}
+      <a href="https://doi.org/{{ include.pub.doi }}">doi:{{ include.pub.doi }}</a>
+    {% endif %}
+  </div>
+</div>

@@ -1,198 +1,119 @@
-<!DOCTYPE HTML>
-<html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+---
+layout: default
+title: Home
+---
 
-    <title>Alexander Greenhalgh</title>
+<!-- Header: Name, Bio, Links, Photo -->
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+  <tr style="padding:0px">
+    <td style="padding:2.5%;width:63%;vertical-align:middle">
+      <p class="name" style="text-align: center;">
+        Alexander D. Greenhalgh
+      </p>
+      <p>
+        I am a PhD student in Computer Science and Engineering at the <a href="https://www.gatech.edu/">Georgia Institute of Technology</a>, supported by a Presidential PhD Fellowship. My research interests lie at the intersection of machine learning, scientific computing, and operations research.
+      </p>
+      <p>
+        Previously, I worked as an Operations Research Analyst at <a href="https://www.army.mil/futures">Army Futures Command</a>, building combat simulation models and LLM-based tools for tactical decision support. I hold an M.S. in Computer Science (Machine Learning) from Georgia Tech and an M.Eng. in Industrial Engineering from New Mexico State University, both with a 4.0 GPA.
+      </p>
+      <p style="text-align:center">
+        <a href="mailto:agreenhalgh3@gatech.edu">Email</a> &nbsp;/&nbsp;
+        <a href="/cv">CV</a> &nbsp;/&nbsp;
+        <a href="https://scholar.google.com/citations?user=-xo876kAAAAJ&hl=en&inst=9897619243961157265">Scholar</a> &nbsp;/&nbsp;
+        <a href="https://www.linkedin.com/in/alex-greenhalgh">LinkedIn</a> &nbsp;/&nbsp;
+        <a href="https://github.com/ahalgh">GitHub</a>
+      </p>
+    </td>
+    <td style="padding:2.5%;width:37%;max-width:37%">
+      <a href="/images/Profile_Headshot.jpeg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="/images/Profile_Headshot.jpeg" class="hoverZoomLink"></a>
+    </td>
+  </tr>
+</tbody></table>
 
-    <meta name="author" content="Alexander Greenhalgh">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+<!-- News -->
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+  <tr>
+    <td style="padding:16px;width:100%;vertical-align:middle">
+      <h2>News</h2>
+      <ul>
+        <li><strong>Aug. 2025</strong> &mdash; Recipient of the Presidential PhD Fellowship, Georgia Institute of Technology.</li>
+        <li><strong>Apr. 2025</strong> &mdash; Awarded Civilian Service Commendation Medal, Department of the Army.</li>
+        <li><strong>Apr. 2025</strong> &mdash; OMSCS Project Showcase Student's Choice Award Winner.</li>
+        <li><strong>May 2025</strong> &mdash; Completed M.S. in Computer Science at Georgia Tech.</li>
+        <li><strong>Dec. 2024</strong> &mdash; Completed M.Eng. in Industrial Engineering at New Mexico State University.</li>
+      </ul>
+    </td>
+  </tr>
+</tbody></table>
 
-  </head>
+<!-- Research -->
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+  <tr>
+    <td style="padding:16px;width:100%;vertical-align:middle">
+      <h2>Research</h2>
+      <p>
+        My work spans machine learning, scientific computing, and operations research. I am particularly interested in applying modern ML methods&mdash;including deep learning, optimization, and LLMs&mdash;to problems in materials informatics, autonomous systems, and decision support. Prior work includes developing interatomic potentials for high-entropy alloys via ML optimization, building retrieval-augmented LLM tools for military applications, and constructing predictive models for alloy mechanical properties.
+      </p>
+    </td>
+  </tr>
+</tbody></table>
 
-  <body>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
+<!-- Publications -->
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+  <tr>
+    <td style="padding:16px 16px 8px 16px;width:100%;vertical-align:middle">
+      <h2>Publications</h2>
+    </td>
+  </tr>
+</tbody></table>
 
-          <!-- Nav -->
-          <nav style="text-align:center;padding:10px 0 8px;margin-bottom:4px;font-size:13px;border-bottom:1px solid #eee;">
-            <a href="index.html">Home</a> &nbsp;/&nbsp;
-            <a href="research.html">Research</a> &nbsp;/&nbsp;
-            <a href="interests.html">Interests</a>
-          </nav>
+<div style="padding:0 16px;">
+  {% for pub in site.data.publications %}
+    {% include paper-tile.html pub=pub %}
+  {% endfor %}
+</div>
 
-          <!-- Header: Name, Bio, Links, Photo -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr style="padding:0px">
-              <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <p class="name" style="text-align: center;">
-                  Alexander D. Greenhalgh
-                </p>
-                <p>
-                  I am a PhD student in Computer Science at the <a href="https://www.gatech.edu/">Georgia Institute of Technology</a>, supported by a Presidential PhD Fellowship. My research interests lie at the intersection of machine learning, scientific computing, and operations research.
-                </p>
-                <p>
-                  Previously, I worked as an Operations Research Analyst at <a href="https://www.army.mil/futures">Army Futures Command</a>, building combat simulation models and LLM-based tools for tactical decision support. I hold an M.S. in Computer Science (Machine Learning) from Georgia Tech and an M.Eng. in Industrial Engineering from New Mexico State University, both with a 4.0 GPA.
-                </p>
-                <p style="text-align:center">
-                  <a href="mailto:agreenhalgh3@gatech.edu">Email</a> &nbsp;/&nbsp;
-                  <a href="cv">CV</a> &nbsp;/&nbsp;
-                  <a href="https://scholar.google.com/citations?user=-xo876kAAAAJ&hl=en&inst=9897619243961157265">Scholar</a> &nbsp;/&nbsp;
-                  <a href="https://www.linkedin.com/in/alex-greenhalgh">LinkedIn</a> &nbsp;/&nbsp;
-                  <a href="https://github.com/ahalgh">GitHub</a>
-                </p>
-              </td>
-              <td style="padding:2.5%;width:37%;max-width:37%">
-                <a href="images/Profile_Headshot.jpeg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/Profile_Headshot.jpeg" class="hoverZoomLink"></a>
-              </td>
-            </tr>
-          </tbody></table>
+<!-- Projects -->
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+  <tr>
+    <td style="padding:16px 16px 4px 16px;width:100%;vertical-align:middle">
+      <h2>Projects</h2>
+    </td>
+  </tr>
+</tbody></table>
 
-          <!-- News -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>News</h2>
-                <ul>
-                  <li><strong>Aug. 2025</strong> &mdash; Recipient of the Presidential PhD Fellowship, Georgia Institute of Technology.</li>
-                  <li><strong>Apr. 2025</strong> &mdash; Awarded Civilian Service Commendation Medal, Department of the Army.</li>
-                  <li><strong>Apr. 2025</strong> &mdash; OMSCS Project Showcase Student's Choice Award Winner.</li>
-                  <li><strong>May 2025</strong> &mdash; Completed M.S. in Computer Science at Georgia Tech.</li>
-                  <li><strong>Dec. 2024</strong> &mdash; Completed M.Eng. in Industrial Engineering at New Mexico State University.</li>
-                </ul>
-              </td>
-            </tr>
-          </tbody></table>
+<table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-          <!-- Research -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Research</h2>
-                <p>
-                  My work spans machine learning, scientific computing, and operations research. I am particularly interested in applying modern ML methods&mdash;including deep learning, optimization, and LLMs&mdash;to problems in materials informatics, autonomous systems, and decision support. Prior work includes developing interatomic potentials for high-entropy alloys via ML optimization, building retrieval-augmented LLM tools for military applications, and constructing predictive models for alloy mechanical properties.
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
+  <tr>
+    <td style="padding:8px 16px;width:100%;vertical-align:middle">
+      <span class="papertitle">Tactical LLM Chatbot for Army Doctrine Q&amp;A</span>
+      <em>&nbsp;&mdash;&nbsp;2023&ndash;2025</em>
+      <p>Designed and built a retrieval-augmented LLM chatbot in Python for tactical question-and-answer, using LangChain for vector embeddings and the OpenAI API. Training corpus consisted of Army Doctrine Manuals scraped with BeautifulSoup.</p>
+    </td>
+  </tr>
 
-          <!-- Publications heading -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:16px 16px 4px 16px;width:100%;vertical-align:middle">
-                <h2>Publications</h2>
-              </td>
-            </tr>
-          </tbody></table>
+  <tr>
+    <td style="padding:8px 16px;width:100%;vertical-align:middle">
+      <span class="papertitle">High-Entropy Alloy Strength Prediction</span>
+      <em>&nbsp;&mdash;&nbsp;Spring 2023</em>
+      <p>XGBoost model for joint optimization of yield strength and ductility, trained on an experimental High-Entropy Alloy database. Achieved 90.1% testing accuracy.</p>
+    </td>
+  </tr>
 
-          <!-- Publications entries -->
-          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+  <tr>
+    <td style="padding:8px 16px;width:100%;vertical-align:middle">
+      <span class="papertitle">Neural Machine Translation: English to German</span>
+      <em>&nbsp;&mdash;&nbsp;Fall 2023</em>
+      <p>Implemented LSTM, Seq2Seq, and Transformer architectures in PyTorch for English-to-German translation. Reproduced attention from Vaswani et al.'s <em>Attention Is All You Need</em>. Testing perplexity of 4.81.</p>
+    </td>
+  </tr>
 
-            <tr>
-              <td style="padding:8px 16px;width:100%;vertical-align:middle">
-                <span class="papertitle">Modified Embedded Atom Method Interatomic Potential for FCC &gamma;-Cerium</span>
-                <br>
-                D.G. Kizzire, <strong>A.D. Greenhalgh</strong>, M.L. Neveau, C.M. Pekol, M.J. Thompson, O. Rios, D.J. Keffer
-                <br>
-                <em>Computational Materials Science</em>, 230, 112454, 2023
-                <br>
-                <a href="https://doi.org/10.1016/j.commatsci.2023.112454">doi:10.1016/j.commatsci.2023.112454</a>
-              </td>
-            </tr>
+  <tr>
+    <td style="padding:8px 16px;width:100%;vertical-align:middle">
+      <span class="papertitle">Autonomous AI Algorithms</span>
+      <em>&nbsp;&mdash;&nbsp;Spring 2024</em>
+      <p>Implemented A*, PID control, Particle and Kalman Filters, and Simultaneous Localization and Mapping (SLAM).</p>
+    </td>
+  </tr>
 
-            <tr>
-              <td style="padding:8px 16px;width:100%;vertical-align:middle">
-                <span class="papertitle">Assessment of Local Observation of Atomic Ordering in Alloys via the Radial Distribution Function: A Computational and Experimental Approach</span>
-                <br>
-                <strong>A.D. Greenhalgh</strong>, L.D. Sanjeewa, P. Luszczek, V. Maroulas, O. Rios, D.J. Keffer
-                <br>
-                <em>Frontiers in Materials</em>, December 2021
-              </td>
-            </tr>
-
-            <tr>
-              <td style="padding:8px 16px;width:100%;vertical-align:middle">
-                <span class="papertitle">Considerations for in situ, real time measurement of plasma-material interactions using Digital Holographic imaging</span>
-                <br>
-                T. Biewer, C. Smith, T. Gebhart, <strong>A.D. Greenhalgh</strong>, X. Ren, C. Thomas
-                <br>
-                <em>Journal of Instrumentation</em>, 15(2), C02017, February 2020
-              </td>
-            </tr>
-
-          </tbody></table>
-
-          <!-- Projects heading -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:16px 16px 4px 16px;width:100%;vertical-align:middle">
-                <h2>Projects</h2>
-              </td>
-            </tr>
-          </tbody></table>
-
-          <!-- Projects entries -->
-          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-
-            <tr>
-              <td style="padding:8px 16px;width:100%;vertical-align:middle">
-                <span class="papertitle">Tactical LLM Chatbot for Army Doctrine Q&amp;A</span>
-                <em>&nbsp;&mdash;&nbsp;2023&ndash;2025</em>
-                <p>
-                  Designed and built a retrieval-augmented LLM chatbot in Python for tactical question-and-answer, using LangChain for vector embeddings and the OpenAI API. Training corpus consisted of Army Doctrine Manuals scraped with BeautifulSoup.
-                </p>
-              </td>
-            </tr>
-
-            <tr>
-              <td style="padding:8px 16px;width:100%;vertical-align:middle">
-                <span class="papertitle">High-Entropy Alloy Strength Prediction</span>
-                <em>&nbsp;&mdash;&nbsp;Spring 2023</em>
-                <p>
-                  XGBoost model for joint optimization of yield strength and ductility, trained on an experimental High-Entropy Alloy database extracted from the literature. Achieved 90.1% testing accuracy.
-                </p>
-              </td>
-            </tr>
-
-            <tr>
-              <td style="padding:8px 16px;width:100%;vertical-align:middle">
-                <span class="papertitle">Neural Machine Translation: English to German</span>
-                <em>&nbsp;&mdash;&nbsp;Fall 2023</em>
-                <p>
-                  Implemented LSTM, Seq2Seq, and Transformer architectures in PyTorch for English-to-German translation. Reproduced the attention mechanism from Vaswani et al.'s <em>Attention Is All You Need</em>. Trained on 31,014 sentences; achieved testing perplexity of 4.81.
-                </p>
-              </td>
-            </tr>
-
-            <tr>
-              <td style="padding:8px 16px;width:100%;vertical-align:middle">
-                <span class="papertitle">Autonomous AI Algorithms</span>
-                <em>&nbsp;&mdash;&nbsp;Spring 2024</em>
-                <p>
-                  Implemented core autonomous systems algorithms: A*, PID control, Particle and Kalman Filters, and Simultaneous Localization and Mapping (SLAM).
-                </p>
-              </td>
-            </tr>
-
-          </tbody></table>
-
-          <!-- Footer -->
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:0px">
-                <br>
-                <p style="text-align:right;font-size:small;">
-                  <a href="https://github.com/jonbarron/jonbarron_website">Source code</a>
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
-
-        </td>
-      </tr>
-    </table>
-  </body>
-</html>
+</tbody></table>

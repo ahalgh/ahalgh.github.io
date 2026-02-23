@@ -1,0 +1,12 @@
+<div class="cv-entry">
+  <div class="cv-entry-header">
+    <span class="cv-institution">{{ include.exp.title }}</span>
+    <span class="cv-dates">{{ include.exp.dates }}</span>
+  </div>
+  <div style="color:#555;margin-bottom:2px;">{{ include.exp.organization }}</div>
+  {% if include.exp.bullets %}
+  <ul>
+    {% for b in include.exp.bullets %}<li>{{ b }}</li>{% endfor %}
+  </ul>
+  {% endif %}
+</div>

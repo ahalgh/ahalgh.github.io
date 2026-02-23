@@ -1,0 +1,20 @@
+title: Alexander Greenhalgh
+description: "PhD Student in Computer Science at Georgia Tech"
+url: "https://ahalgh.github.io"
+baseurl: ""
+
+author:
+  name: Alexander Greenhalgh
+  email: agreenhalgh3@gatech.edu
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+collections:
+  papers:
+    output: true
+    permalink: /papers/:name/
+
+plugins:
+  - jekyll-sitemap
