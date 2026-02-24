@@ -5,6 +5,10 @@ extra_css: /styles/cv.css
 fa: true
 ---
 
+<button class="cv-download-btn" onclick="downloadCV()">
+  <i class="fas fa-download"></i> Download PDF
+</button>
+
 <div class="cv-grid">
 
   <div class="cv-grid-header">
@@ -112,3 +116,24 @@ fa: true
   </div>
 
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script>
+function downloadCV() {
+  var btn = document.querySelector('.cv-download-btn');
+  btn.disabled = true;
+  btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating...';
+
+  html2pdf().set({
+    margin:      0.5,
+    filename:    'Greenhalgh_CV.pdf',
+    image:       { type: 'jpeg', quality: 0.98 },
+    html2canvas: { scale: 2, useCORS: true, logging: false },
+    jsPDF:       { unit: 'in', format: 'letter', orientation: 'portrait' },
+    pagebreak:   { mode: 'avoid-all' }
+  }).from(document.querySelector('.cv-grid')).save().then(function() {
+    btn.disabled = false;
+    btn.innerHTML = '<i class="fas fa-download"></i> Download PDF';
+  });
+}
+</script>
