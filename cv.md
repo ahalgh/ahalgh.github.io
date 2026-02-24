@@ -3,77 +3,89 @@ layout: default
 title: CV
 ---
 
-<div style="text-align:center;padding-bottom:12px;border-bottom:2px solid #222;margin-bottom:4px;">
-  <p class="name" style="font-size:26px;font-weight:700;margin-bottom:6px;">{{ site.data.personal.name }}</p>
-  <p style="font-size:12px;color:#555;">
-    {{ site.data.personal.phone }} &bull;
-    <a href="mailto:{{ site.data.personal.email }}">{{ site.data.personal.email }}</a> &bull;
-    <a href="https://{{ site.data.personal.linkedin }}">{{ site.data.personal.linkedin }}</a> &bull;
-    <a href="https://{{ site.data.personal.github }}">{{ site.data.personal.github }}</a>
-  </p>
-</div>
+<div class="cv-grid">
 
-<div class="cv-section">
-  <h2>Educational Background</h2>
-  {% for edu in site.data.education %}
-    {% include cv/education.html edu=edu %}
-  {% endfor %}
-</div>
+  <div class="cv-grid-header">
+    <p class="name" style="font-size:26px;font-weight:700;margin:0 0 6px;">{{ site.data.personal.name }}</p>
+    <p style="font-size:12px;color:#555;margin:0;">
+      {{ site.data.personal.phone }} &bull;
+      <a href="mailto:{{ site.data.personal.email }}">{{ site.data.personal.email }}</a> &bull;
+      <a href="https://{{ site.data.personal.linkedin }}">{{ site.data.personal.linkedin }}</a> &bull;
+      <a href="https://{{ site.data.personal.github }}">{{ site.data.personal.github }}</a>
+    </p>
+  </div>
 
-<div class="cv-section">
-  <h2>Honors and Awards</h2>
-  <ul>
-    {% for award in site.data.honors %}<li>{{ award }}</li>{% endfor %}
-  </ul>
-</div>
+  <h2 class="cv-section-title">Education</h2>
+  <div class="cv-section-body">
+    {% for edu in site.data.education %}
+      {% include cv/education.html edu=edu %}
+    {% endfor %}
+  </div>
 
-<div class="cv-section">
-  <h2>Professional Experience</h2>
-  {% for exp in site.data.experience %}
-    {% include cv/experience.html exp=exp %}
-  {% endfor %}
-</div>
+  <h2 class="cv-section-title">Honors &amp; Awards</h2>
+  <div class="cv-section-body">
+    {% for award in site.data.honors %}
+      <div class="cv-entry">
+        <div class="cv-left-date"></div>
+        <div class="cv-right-content"><div>{{ award }}</div></div>
+      </div>
+    {% endfor %}
+  </div>
 
-<div class="cv-section">
-  <h2>Projects</h2>
-  {% for proj in site.data.projects %}
-    {% include cv/project.html proj=proj %}
-  {% endfor %}
-</div>
+  <h2 class="cv-section-title">Professional Experience</h2>
+  <div class="cv-section-body">
+    {% for exp in site.data.experience %}
+      {% include cv/experience.html exp=exp %}
+    {% endfor %}
+  </div>
 
-<div class="cv-section">
-  <h2>Training</h2>
-  {% for t in site.data.training %}
-    {% include cv/training.html t=t %}
-  {% endfor %}
-</div>
+  <h2 class="cv-section-title">Projects</h2>
+  <div class="cv-section-body">
+    {% for proj in site.data.projects %}
+      {% include cv/project.html proj=proj %}
+    {% endfor %}
+  </div>
 
-<div class="cv-section">
-  <h2>Skills</h2>
-  <div class="cv-skill-row"><strong>Languages &amp; Software:</strong> {{ site.data.skills.languages }}</div>
-  {% for s in site.data.skills.software %}
-    <div class="cv-skill-row">{{ s }}</div>
-  {% endfor %}
-</div>
+  <h2 class="cv-section-title">Training</h2>
+  <div class="cv-section-body">
+    {% for t in site.data.training %}
+      {% include cv/training.html t=t %}
+    {% endfor %}
+  </div>
 
-<div class="cv-section">
-  <h2>Publications</h2>
-  <h3>Journal Articles</h3>
-  {% for pub in site.data.publications %}
-    {% if pub.type == "journal" %}
-      {% include cv/publication.html pub=pub %}
-    {% endif %}
-  {% endfor %}
-</div>
+  <h2 class="cv-section-title">Skills</h2>
+  <div class="cv-section-body">
+    <div class="cv-entry">
+      <div class="cv-left-date"></div>
+      <div class="cv-right-content">
+        <div><strong>Languages &amp; Frameworks:</strong> {{ site.data.skills.languages }}</div>
+        {% for s in site.data.skills.software %}<div>{{ s }}</div>{% endfor %}
+      </div>
+    </div>
+  </div>
 
-<div class="cv-section">
-  <h2>Presentations</h2>
-  <h3>Oral</h3>
-  {% for p in site.data.presentations.oral %}
-    {% include cv/presentation.html pres=p %}
-  {% endfor %}
-  <h3>Poster</h3>
-  {% for p in site.data.presentations.poster %}
-    {% include cv/presentation.html pres=p %}
-  {% endfor %}
+  <h2 class="cv-section-title">Publications</h2>
+  <h3 class="cv-subsection-title">Journal Articles</h3>
+  <div class="cv-section-body">
+    {% for pub in site.data.publications %}
+      {% if pub.type == "journal" %}
+        {% include cv/publication.html pub=pub %}
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <h2 class="cv-section-title">Presentations</h2>
+  <h3 class="cv-subsection-title">Oral</h3>
+  <div class="cv-section-body">
+    {% for p in site.data.presentations.oral %}
+      {% include cv/presentation.html pres=p %}
+    {% endfor %}
+  </div>
+  <h3 class="cv-subsection-title">Poster</h3>
+  <div class="cv-section-body">
+    {% for p in site.data.presentations.poster %}
+      {% include cv/presentation.html pres=p %}
+    {% endfor %}
+  </div>
+
 </div>

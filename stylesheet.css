@@ -186,46 +186,69 @@ span.highlight {
   color: #666;
 }
 
-/* ── CV styles ────────────────────────────────────────────── */
-.cv-section {
-  margin-bottom: 22px;
-  padding: 0 16px;
+/* ── CV grid layout ───────────────────────────────────────── */
+/* Mirrors helblazer811's approach: top-level grid with      */
+/* display:contents on entries so all dates align globally.  */
+
+.cv-grid {
+  display: grid;
+  grid-template-columns: 130px 20px 1fr;
+  align-items: baseline;
+  padding: 0 16px 24px;
 }
 
-.cv-section h2 {
-  font-size: 12px;
+/* Full-width items span the content column only */
+.cv-grid-header {
+  grid-column: 3 / -1;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #222;
+  margin-bottom: 4px;
+}
+
+.cv-section-title {
+  grid-column: 3 / -1;
+  font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.09em;
-  border-bottom: 2px solid #222;
+  border-bottom: 1px solid #ddd;
   padding-bottom: 5px;
-  margin: 0 0 12px;
+  margin: 22px 0 10px;
   color: #111;
 }
 
-.cv-section h3 {
+.cv-subsection-title {
+  grid-column: 3 / -1;
   font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: #555;
-  margin: 10px 0 6px;
+  letter-spacing: 0.07em;
+  color: #888;
+  margin: 10px 0 4px;
 }
 
-/* Two-column grid: narrow date left, content right */
+/* Transparent containers — children become direct grid items */
+.cv-section-body,
 .cv-entry {
-  display: grid;
-  grid-template-columns: 108px 1fr;
-  gap: 0 14px;
-  margin-bottom: 13px;
+  display: contents;
 }
 
+/* The two columns every entry produces */
 .cv-left-date {
-  font-size: 11px;
-  color: #666;
+  grid-column: 1 / 2;
   text-align: right;
-  padding-top: 2px;
+  font-size: 11px;
+  color: #999;
+  padding-top: 3px;
   line-height: 1.5;
+}
+
+.cv-right-content {
+  grid-column: 3 / -1;
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 }
 
 .cv-right-content b {
@@ -235,18 +258,17 @@ span.highlight {
 
 .cv-role {
   font-size: 13px;
-  color: #333;
+  color: #444;
   font-style: italic;
 }
 
 .cv-description {
   font-size: 12px;
-  color: #666;
-  margin-top: 2px;
+  color: #888;
 }
 
 .cv-right-content ul {
-  margin: 4px 0 0 0;
+  margin: 2px 0 0;
   padding-left: 16px;
 }
 
@@ -268,19 +290,25 @@ span.highlight {
 
 .cv-pub-venue {
   font-size: 12px;
-  color: #666;
+  color: #777;
   font-style: italic;
-}
-
-.cv-skill-row {
-  font-size: 13px;
-  margin-bottom: 4px;
 }
 
 /* ── Print: hide nav ──────────────────────────────────────── */
 @media print {
   nav { display: none !important; }
-  body { font-size: 11px; }
-  .cv-section h2 { font-size: 11px; }
-  .cv-left-date { font-size: 10px; }
+  .cv-left-date { font-size: 9px; }
+  .cv-section-title { font-size: 10px; }
+}
+
+/* ── Mobile: collapse to single column ───────────────────── */
+@media screen and (max-width: 600px) {
+  .cv-grid { display: block; }
+  .cv-left-date {
+    text-align: left;
+    color: #1772d0;
+    font-weight: 500;
+    margin-bottom: 1px;
+  }
+  .cv-right-content { margin-bottom: 16px; }
 }
