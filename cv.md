@@ -5,10 +5,6 @@ extra_css: /styles/cv.css
 fa: true
 ---
 
-<button class="cv-download-btn" onclick="downloadCV()">
-  <i class="fas fa-download"></i> Download PDF
-</button>
-
 <div class="cv-grid">
 
   <div class="cv-grid-header">
@@ -23,6 +19,10 @@ fa: true
           <i class="fas fa-globe"></i>
           <a href="https://{{ site.data.personal.homepage }}">{{ site.data.personal.homepage }}</a>
         </div>
+        <div class="cv-social-link">
+          <i class="fas fa-file-pdf"></i>
+          <a href="javascript:void(0)" onclick="downloadCV()">Download CV</a>
+        </div>
       </div>
       <div class="cv-social-col">
         <div class="cv-social-link">
@@ -32,6 +32,10 @@ fa: true
         <div class="cv-social-link">
           <i class="fas fa-graduation-cap"></i>
           <a href="{{ site.data.personal.scholar }}">Google Scholar</a>
+        </div>
+        <div class="cv-social-link">
+          <i class="fab fa-spotify" style="color:#1DB954;"></i>
+          <a href="{{ site.data.personal.spotify }}">Alex Greenhalgh</a>
         </div>
       </div>
     </div>
