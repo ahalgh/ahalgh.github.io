@@ -21,7 +21,7 @@ fa: true
         </div>
         <div class="cv-social-link">
           <i class="fas fa-file-pdf"></i>
-          <a href="javascript:void(0)" onclick="downloadCV(this)">CV PDF</a>
+          <a href="javascript:void(0)" onclick="downloadCV()">CV PDF</a>
         </div>
       </div>
       <div class="cv-social-col">
@@ -123,11 +123,7 @@ fa: true
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script>
-function downloadCV(link) {
-  var original = link.textContent;
-  link.textContent = 'Generating…';
-  link.style.pointerEvents = 'none';
-
+function downloadCV() {
   html2pdf().set({
     margin:      0.5,
     filename:    'Greenhalgh_CV.pdf',
@@ -135,9 +131,6 @@ function downloadCV(link) {
     html2canvas: { scale: 2, useCORS: true, logging: false },
     jsPDF:       { unit: 'in', format: 'letter', orientation: 'portrait' },
     pagebreak:   { mode: 'avoid-all' }
-  }).from(document.querySelector('.cv-grid')).save().then(function() {
-    link.textContent = original;
-    link.style.pointerEvents = '';
-  });
+  }).from(document.querySelector('.cv-grid')).save();
 }
 </script>
