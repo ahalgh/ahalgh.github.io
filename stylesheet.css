@@ -188,58 +188,72 @@ span.highlight {
 
 /* ── CV styles ────────────────────────────────────────────── */
 .cv-section {
-  margin-bottom: 18px;
+  margin-bottom: 22px;
   padding: 0 16px;
 }
 
 .cv-section h2 {
-  font-size: 16px;
-  font-weight: 700;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 4px;
-  margin-bottom: 8px;
-}
-
-.cv-entry {
-  margin-bottom: 10px;
-}
-
-.cv-entry-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
-
-.cv-institution {
-  font-weight: 700;
-  font-size: 14px;
-}
-
-.cv-dates {
   font-size: 12px;
-  color: #555;
-  white-space: nowrap;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  border-bottom: 2px solid #222;
+  padding-bottom: 5px;
+  margin: 0 0 12px;
+  color: #111;
 }
 
-.cv-entry-sub {
+.cv-section h3 {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #555;
+  margin: 10px 0 6px;
+}
+
+/* Two-column grid: narrow date left, content right */
+.cv-entry {
+  display: grid;
+  grid-template-columns: 108px 1fr;
+  gap: 0 14px;
+  margin-bottom: 13px;
+}
+
+.cv-left-date {
+  font-size: 11px;
+  color: #666;
+  text-align: right;
+  padding-top: 2px;
+  line-height: 1.5;
+}
+
+.cv-right-content b {
+  font-size: 14px;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+}
+
+.cv-role {
   font-size: 13px;
   color: #333;
   font-style: italic;
-  margin-bottom: 2px;
 }
 
-.cv-entry ul {
+.cv-description {
+  font-size: 12px;
+  color: #666;
+  margin-top: 2px;
+}
+
+.cv-right-content ul {
   margin: 4px 0 0 0;
-  padding-left: 18px;
+  padding-left: 16px;
 }
 
-.cv-entry ul li {
+.cv-right-content ul li {
   font-size: 13px;
   margin-bottom: 2px;
-}
-
-.cv-pub {
-  margin-bottom: 8px;
+  line-height: 1.5;
 }
 
 .cv-pub-title {
@@ -267,5 +281,6 @@ span.highlight {
 @media print {
   nav { display: none !important; }
   body { font-size: 11px; }
-  .cv-section h2 { font-size: 13px; }
+  .cv-section h2 { font-size: 11px; }
+  .cv-left-date { font-size: 10px; }
 }

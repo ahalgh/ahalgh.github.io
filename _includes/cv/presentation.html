@@ -1,6 +1,8 @@
-<div class="cv-pub">
-  {{ include.pres.authors }},
-  &ldquo;{{ include.pres.title }}&rdquo;,
-  <em>{{ include.pres.venue }}</em>,
-  {{ include.pres.location }}, {{ include.pres.date }}.
+<div class="cv-entry">
+  <div class="cv-left-date">{{ include.pres.date }}</div>
+  <div class="cv-right-content">
+    <div class="cv-pub-title">&ldquo;{{ include.pres.title }}&rdquo;</div>
+    <div class="cv-pub-venue"><em>{{ include.pres.venue }}</em>, {{ include.pres.location }}</div>
+    <div class="cv-pub-authors">{{ include.pres.authors }}</div>
+  </div>
 </div>

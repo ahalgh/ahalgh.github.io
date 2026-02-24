@@ -1,15 +1,13 @@
 <div class="cv-entry">
-  <div class="cv-entry-header">
-    <span class="cv-institution">{{ include.edu.institution }}, {{ include.edu.degree }}</span>
-    <span class="cv-dates">{{ include.edu.dates }}</span>
+  <div class="cv-left-date">{{ include.edu.dates }}</div>
+  <div class="cv-right-content">
+    <div><b>{{ include.edu.institution }}</b></div>
+    <div class="cv-role">{{ include.edu.degree }}</div>
+    <div class="cv-description">{{ include.edu.department }} &bull; GPA: {{ include.edu.gpa }}</div>
+    {% if include.edu.bullets %}
+    <ul>
+      {% for b in include.edu.bullets %}<li>{{ b }}</li>{% endfor %}
+    </ul>
+    {% endif %}
   </div>
-  <div class="cv-entry-sub">
-    <span>{{ include.edu.department }}</span>
-    <span>GPA: <strong>{{ include.edu.gpa }}</strong></span>
-  </div>
-  {% if include.edu.bullets %}
-  <ul>
-    {% for b in include.edu.bullets %}<li><em>{{ b }}</em></li>{% endfor %}
-  </ul>
-  {% endif %}
 </div>

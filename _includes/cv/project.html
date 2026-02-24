@@ -1,11 +1,11 @@
 <div class="cv-entry">
-  <div class="cv-entry-header">
-    <span class="cv-institution">{{ include.proj.title }}</span>
-    <span class="cv-dates">{{ include.proj.date }}</span>
+  <div class="cv-left-date">{{ include.proj.date }}</div>
+  <div class="cv-right-content">
+    <div><b>{{ include.proj.title }}</b></div>
+    {% if include.proj.bullets %}
+    <ul>
+      {% for b in include.proj.bullets %}<li>{{ b }}</li>{% endfor %}
+    </ul>
+    {% endif %}
   </div>
-  {% if include.proj.bullets %}
-  <ul>
-    {% for b in include.proj.bullets %}<li>{{ b }}</li>{% endfor %}
-  </ul>
-  {% endif %}
 </div>

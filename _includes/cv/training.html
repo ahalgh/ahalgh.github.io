@@ -1,11 +1,12 @@
 <div class="cv-entry">
-  <div class="cv-entry-header">
-    <span class="cv-institution">{{ include.t.institution }}, {{ include.t.program }}</span>
-    <span class="cv-dates">{{ include.t.date }}</span>
+  <div class="cv-left-date">{{ include.t.date }}</div>
+  <div class="cv-right-content">
+    <div><b>{{ include.t.institution }}</b></div>
+    <div class="cv-role">{{ include.t.program }}</div>
+    {% if include.t.bullets %}
+    <ul>
+      {% for b in include.t.bullets %}<li>{{ b }}</li>{% endfor %}
+    </ul>
+    {% endif %}
   </div>
-  {% if include.t.bullets %}
-  <ul>
-    {% for b in include.t.bullets %}<li>{{ b }}</li>{% endfor %}
-  </ul>
-  {% endif %}
 </div>

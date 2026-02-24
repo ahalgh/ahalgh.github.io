@@ -58,7 +58,7 @@ title: CV
 
 <div class="cv-section">
   <h2>Publications</h2>
-  <h3 style="font-size:13px;font-weight:700;margin:8px 0 4px;">Journal Articles</h3>
+  <h3>Journal Articles</h3>
   {% for pub in site.data.publications %}
     {% if pub.type == "journal" %}
       {% include cv/publication.html pub=pub %}
@@ -68,11 +68,11 @@ title: CV
 
 <div class="cv-section">
   <h2>Presentations</h2>
-  <h3 style="font-size:13px;font-weight:700;margin:8px 0 4px;">Oral</h3>
+  <h3>Oral</h3>
   {% for p in site.data.presentations.oral %}
     {% include cv/presentation.html pres=p %}
   {% endfor %}
-  <h3 style="font-size:13px;font-weight:700;margin:8px 0 4px;">Poster</h3>
+  <h3>Poster</h3>
   {% for p in site.data.presentations.poster %}
     {% include cv/presentation.html pres=p %}
   {% endfor %}
