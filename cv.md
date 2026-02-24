@@ -2,18 +2,35 @@
 layout: default
 title: CV
 extra_css: /styles/cv.css
+fa: true
 ---
 
 <div class="cv-grid">
 
   <div class="cv-grid-header">
-    <p class="name" style="font-size:26px;font-weight:700;margin:0 0 6px;">{{ site.data.personal.name }}</p>
-    <p style="font-size:12px;color:#555;margin:0;">
-      {{ site.data.personal.phone }} &bull;
-      <a href="mailto:{{ site.data.personal.email }}">{{ site.data.personal.email }}</a> &bull;
-      <a href="https://{{ site.data.personal.linkedin }}">{{ site.data.personal.linkedin }}</a> &bull;
-      <a href="https://{{ site.data.personal.github }}">{{ site.data.personal.github }}</a>
-    </p>
+    <p class="name" style="font-size:26px;font-weight:700;margin:0 0 10px;">{{ site.data.personal.name }}</p>
+    <div class="cv-social-links">
+      <div class="cv-social-col">
+        <div class="cv-social-link">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:{{ site.data.personal.email }}">{{ site.data.personal.email }}</a>
+        </div>
+        <div class="cv-social-link">
+          <i class="fas fa-globe"></i>
+          <a href="https://{{ site.data.personal.homepage }}">{{ site.data.personal.homepage }}</a>
+        </div>
+      </div>
+      <div class="cv-social-col">
+        <div class="cv-social-link">
+          <i class="fab fa-github"></i>
+          <a href="https://{{ site.data.personal.github }}">{{ site.data.personal.github }}</a>
+        </div>
+        <div class="cv-social-link">
+          <i class="fas fa-graduation-cap"></i>
+          <a href="{{ site.data.personal.scholar }}">Google Scholar</a>
+        </div>
+      </div>
+    </div>
   </div>
 
   <h2 class="cv-section-title">Education</h2>
@@ -26,9 +43,14 @@ extra_css: /styles/cv.css
   <h2 class="cv-section-title">Honors &amp; Awards</h2>
   <div class="cv-section-body">
     {% for award in site.data.honors %}
+      {% assign parts = award | split: ", " %}
+      {% assign date = parts | last %}
+      {% assign name_size = parts | size | minus: 1 %}
+      {% assign name_parts = parts | slice: 0, name_size %}
+      {% assign name = name_parts | join: ", " %}
       <div class="cv-entry">
-        <div class="cv-left-date"></div>
-        <div class="cv-right-content"><div>{{ award }}</div></div>
+        <div class="cv-left-date">{{ date }}</div>
+        <div class="cv-right-content"><div>{{ name }}</div></div>
       </div>
     {% endfor %}
   </div>

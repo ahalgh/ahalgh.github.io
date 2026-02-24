@@ -160,6 +160,43 @@
     text-decoration: underline;
 }
 
+/* --- Social Links (mirrors .cv-image-links-wrapper in reference) --- */
+.cv-social-links {
+    width: 100%;
+    display: flex;
+    gap: 0;
+    margin-top: 0.5rem;
+}
+
+.cv-social-col {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.cv-social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.cv-social-link i {
+    color: var(--silver);
+    width: 1em;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.cv-social-link a {
+    font-size: 0.86rem;
+    color: var(--dark-gray);
+}
+
+.cv-social-link a:hover {
+    color: var(--blue);
+}
+
 /* --- Utilities --- */
 .cv-spacer {
     height: 1rem;
