@@ -1,9 +1,11 @@
 <div class="cv-entry">
   <div class="cv-left-date">{{ include.edu.dates }}</div>
   <div class="cv-right-content">
-    <div><b>{{ include.edu.institution }}</b></div>
-    <div class="cv-role">{{ include.edu.degree }}</div>
-    <div class="cv-description">{{ include.edu.department }} &bull; GPA: {{ include.edu.gpa }}</div>
+    <div><b>{{ include.edu.degree }}</b></div>
+    <div class="cv-role">{{ include.edu.institution }}{% if include.edu.location %}, {{ include.edu.location }}{% endif %}</div>
+    <div class="cv-description">
+      {{ include.edu.department }}{% if include.edu.gpa and include.edu.gpa != "" %} &bull; GPA: {{ include.edu.gpa }}{% endif %}
+    </div>
     {% if include.edu.bullets %}
     <ul>
       {% for b in include.edu.bullets %}<li>{{ b }}</li>{% endfor %}

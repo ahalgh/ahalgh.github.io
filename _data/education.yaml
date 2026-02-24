@@ -1,4 +1,14 @@
 - institution: "Georgia Institute of Technology"
+  location: "Atlanta, GA"
+  degree: "Ph.D. in Computational Science and Engineering"
+  department: "Advisor: Duen Horng (Polo) Chau"
+  dates: "Aug. 2025 – Present"
+  gpa: ""
+  bullets:
+    - "Georgia Tech President's Fellowship."
+
+- institution: "Georgia Institute of Technology"
+  location: "Atlanta, GA"
   degree: "M.S. in Computer Science"
   department: "Machine Learning Concentration"
   dates: "Aug. 2023 – May 2025"
@@ -8,6 +18,7 @@
     - "Academic Integrity TA: Machine Learning for Trading, Software Development/Architecture Processes."
 
 - institution: "New Mexico State University"
+  location: "Las Cruces, NM"
   degree: "M.Eng. in Industrial Engineering"
   department: "Department of Industrial Engineering"
   dates: "Aug. 2023 – Dec. 2024"
@@ -17,7 +28,8 @@
     - "ORSA Military Applications Course: 14 Week Operations Research Training at Army Logistics University."
 
 - institution: "The University of Tennessee"
-  degree: "B.S. Materials Science and Engineering"
+  location: "Knoxville, TN"
+  degree: "B.S. in Materials Science and Engineering"
   department: "Minors: Computer Science and Mathematics"
   dates: "Aug. 2019 – May 2023"
   gpa: "3.88/4.00"
