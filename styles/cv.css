@@ -1,0 +1,191 @@
+/* styles/cv.css — mirrors helblazer811.github.io/styles/cv.css */
+
+/* --- Variables --- */
+:root {
+    --text-color: #333;
+    --dark-gray: #4a4a4a;
+    --moon-gray: #ccc;
+    --silver: #999;
+    --blue: #1772d0;
+    --dark-blue: #0f5aa8;
+    --orange: #f09228;
+    --gold: #ffb700;
+    --border-color: #eee;
+    --bg-color: #fff;
+    --mobile-width: 768px;
+}
+
+/* --- Main Layout Grid --- */
+/* Analogous to .page-container in the reference.             */
+/* grid-template-columns: date-col gap content-col            */
+.cv-grid {
+    display: grid;
+    grid-template-columns: 130px 20px 1fr;
+    align-items: baseline;
+    padding: 0 16px 24px;
+}
+
+/* Items that span only the content column (col 3 onward) */
+.cv-grid-header,
+.cv-section-title,
+.cv-subsection-title {
+    grid-column: 3 / -1;
+}
+
+/* --- Header --- */
+.cv-grid-header {
+    padding-bottom: 14px;
+    border-bottom: 2px solid #222;
+    margin-bottom: 4px;
+}
+
+/* --- Section Headers --- */
+.cv-section-title {
+    font-size: 0.93rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.35rem;
+    margin: 1.6rem 0 0.7rem;
+    color: #111;
+}
+
+.cv-subsection-title {
+    font-size: 0.79rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--silver);
+    margin: 0.7rem 0 0.3rem;
+}
+
+/* --- Experience Entries (The Grid Magic) --- */
+/* display:contents makes .cv-entry and .cv-section-body      */
+/* transparent to the grid — their children participate       */
+/* directly in .cv-grid, so all date columns align globally.  */
+.cv-section-body,
+.cv-entry {
+    display: contents;
+}
+
+/* Section containers also transparent */
+.cv-section-body {
+    display: contents;
+}
+
+.cv-left-date {
+    grid-column: 1 / 2;
+    text-align: right;
+    font-size: 0.79rem;
+    color: var(--silver);
+    padding-top: 0.2rem;
+    line-height: 1.4;
+}
+
+.cv-right-content {
+    grid-column: 3 / -1;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* --- Content Typography --- */
+.cv-right-content b {
+    font-size: 1rem;
+    font-family: 'Lato', Verdana, Helvetica, sans-serif;
+}
+
+.cv-role {
+    font-style: italic;
+    font-size: 0.93rem;
+}
+
+.cv-description {
+    color: var(--silver);
+    font-size: 0.86rem;
+    font-weight: 300;
+}
+
+.cv-right-content ul {
+    margin: 0.15rem 0 0;
+    padding-left: 1.1rem;
+}
+
+.cv-right-content ul li {
+    font-size: 0.93rem;
+    margin-bottom: 0.15rem;
+    line-height: 1.5;
+}
+
+/* --- Awards --- */
+.cv-award {
+    color: var(--gold);
+    font-size: 0.93rem;
+}
+
+/* --- Publication entries --- */
+.cv-pub-title {
+    font-weight: 700;
+    font-size: 0.93rem;
+}
+
+.cv-pub-authors {
+    font-size: 0.86rem;
+    color: var(--dark-gray);
+}
+
+.cv-pub-venue {
+    font-size: 0.86rem;
+    color: var(--silver);
+    font-style: italic;
+}
+
+/* --- Misc publication links (PDF, DOI, code) --- */
+.pub-misc {
+    display: flex;
+    gap: 15px;
+    row-gap: 0.4rem;
+    flex-wrap: wrap;
+    font-size: 0.93rem;
+}
+
+.pub-misc a {
+    color: var(--blue);
+}
+
+.pub-misc a:hover {
+    color: var(--dark-blue);
+    text-decoration: underline;
+}
+
+/* --- Utilities --- */
+.cv-spacer {
+    height: 1rem;
+}
+
+/* --- Print --- */
+@media print {
+    nav { display: none !important; }
+    .cv-left-date { font-size: 0.65rem; }
+    .cv-section-title { font-size: 0.72rem; }
+}
+
+/* --- Mobile Responsive --- */
+@media screen and (max-width: 768px) {
+    .cv-grid {
+        display: block;
+    }
+
+    .cv-left-date {
+        text-align: left;
+        margin-bottom: 0.25rem;
+        color: var(--blue);
+        font-weight: 500;
+    }
+
+    .cv-right-content {
+        margin-bottom: 1.5rem;
+    }
+}

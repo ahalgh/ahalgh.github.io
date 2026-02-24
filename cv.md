@@ -1,6 +1,7 @@
 ---
 layout: default
 title: CV
+extra_css: /styles/cv.css
 ---
 
 <div class="cv-grid">
