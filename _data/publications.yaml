@@ -1,3 +1,21 @@
+- id: omscs-phd-transitions
+  type: conference
+  featured: true
+  title: "Exploring Transitions of Graduates From an Online Master's in Computer Science Program to Doctoral Programs"
+  authors:
+    - "Greenhalgh, A.D."
+    - "Deng, P."
+    - "Yu, B."
+    - "Lytle, N."
+    - "Joyner, D.A."
+  year: 2026
+  venue: "Proceedings of the 57th ACM Technical Symposium on Computer Science Education (SIGCSE TS)"
+  details: "February 2026, St. Louis, MO, USA"
+  doi: "10.1145/3770762.3772654"
+  pdf: "https://dl.acm.org/doi/abs/10.1145/3770762.3772654"
+  abstract: ""
+  image: ""
+
 - id: cerium-potential
   type: journal
   featured: true
@@ -14,6 +32,7 @@
   venue: "Computational Materials Science"
   details: "230, article #112454, 2023, pp. 1–9"
   doi: "10.1016/j.commatsci.2023.112454"
+  pdf: "https://www.sciencedirect.com/science/article/pii/S0927025623004482"
   abstract: ""
   image: ""
 
@@ -32,6 +51,7 @@
   venue: "Frontiers in Materials"
   details: "December 2021"
   doi: ""
+  pdf: "https://www.frontiersin.org/journals/materials/articles/10.3389/fmats.2021.797418/full"
   abstract: ""
   image: ""
 
@@ -50,5 +70,6 @@
   venue: "Journal of Instrumentation"
   details: "15(2), C02017, February 2020"
   doi: ""
+  pdf: "https://iopscience.iop.org/article/10.1088/1748-0221/15/02/C02017"
   abstract: ""
   image: ""
