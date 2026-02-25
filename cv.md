@@ -30,12 +30,12 @@ fa: true
           <a href="https://{{ site.data.personal.github }}">{{ site.data.personal.github }}</a>
         </div>
         <div class="cv-social-link">
-          <i class="fas fa-graduation-cap"></i>
-          <a href="{{ site.data.personal.scholar }}">Google Scholar</a>
+          <i class="fab fa-linkedin"></i>
+          <a href="https://{{ site.data.personal.linkedin }}">LinkedIn</a>
         </div>
         <div class="cv-social-link">
-          <i class="fab fa-spotify" style="color:#1DB954;"></i>
-          <a href="{{ site.data.personal.spotify }}">Alex Greenhalgh</a>
+          <i class="fas fa-graduation-cap"></i>
+          <a href="{{ site.data.personal.scholar }}">Google Scholar</a>
         </div>
       </div>
     </div>
