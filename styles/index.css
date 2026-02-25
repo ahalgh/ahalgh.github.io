@@ -87,31 +87,11 @@
   --shadow-color: rgba(0, 0, 0, 0.10);
 }
 
-[data-theme="dark"] {
-  --text-color: #e0e0e0;
-  --text-secondary: #b0b0b0;
-  --text-muted: #909090;
-  --dark-gray: #c0c0c0;
-  --moon-gray: #555;
-  --silver: #888;
-  --blue: #5ba3e6;
-  --dark-blue: #7db8f0;
-  --orange: #f4a84b;
-  --gold: #ffc933;
-  --border-color: #333;
-  --border-light: #333;
-  --bg-color: #1a1a2e;
-  --bg-secondary: #222240;
-  --bg-hover: #2a2a4a;
-  --highlight-bg: #3a3a20;
-  --shadow-color: rgba(0, 0, 0, 0.30);
-}
 
 /* ── Base typography ──────────────────────────────────────── */
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {
