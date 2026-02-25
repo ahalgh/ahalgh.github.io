@@ -1,11 +1,11 @@
 <div class="cv-entry">
   {% if include.pres.venues %}
-    <div class="cv-left-date"></div>
+    <div class="cv-left-date cv-multi-venue-date"></div>
     <div class="cv-right-content cv-multi-venue">
       <div class="cv-pub-title">&ldquo;{{ include.pres.title }}&rdquo;</div>
     </div>
     {% for v in include.pres.venues %}
-      <div class="cv-left-date">{{ v.date }}</div>
+      <div class="cv-left-date cv-multi-venue-date">{{ v.date }}</div>
       {% if forloop.last %}
         <div class="cv-right-content">
           <div class="cv-pub-venue"><em>{{ v.venue }}</em>, {{ v.location }}</div>

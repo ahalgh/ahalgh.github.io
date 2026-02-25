@@ -130,6 +130,11 @@
 
 .cv-right-content.cv-multi-venue {
     margin-bottom: 0;
+    gap: 0;
+}
+
+.cv-left-date.cv-multi-venue-date {
+    padding-top: 0;
 }
 
 /* --- Misc publication links (PDF, DOI, code) --- */
