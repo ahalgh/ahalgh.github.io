@@ -39,6 +39,8 @@ fa: true
         </div>
       </div>
     </div>
+    <p class="cv-statement" style="margin:12px 0 0;font-style:italic;">Machine Learning, Scientific Computing, and Operations Research</p>
+    <p class="cv-statement" style="margin:6px 0 0;">I apply modern ML methods&mdash;including deep learning, optimization, and large language models&mdash;to problems in materials informatics, autonomous systems, and decision support. I have worked with researchers and engineers at Georgia Tech, Army Futures Command, and New Mexico State University.</p>
   </div>
 
   <h2 class="cv-section-title">Education</h2>
