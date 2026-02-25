@@ -1,8 +1,18 @@
 <div class="cv-entry">
-  <div class="cv-left-date">{{ include.pres.date }}</div>
+  {% if include.pres.venues %}
+    <div class="cv-left-date">{{ include.pres.venues.first.date }}</div>
+  {% else %}
+    <div class="cv-left-date">{{ include.pres.date }}</div>
+  {% endif %}
   <div class="cv-right-content">
     <div class="cv-pub-title">&ldquo;{{ include.pres.title }}&rdquo;</div>
-    <div class="cv-pub-venue"><em>{{ include.pres.venue }}</em>, {{ include.pres.location }}</div>
+    {% if include.pres.venues %}
+      {% for v in include.pres.venues %}
+        <div class="cv-pub-venue"><em>{{ v.venue }}</em>, {{ v.location }}, {{ v.date }}</div>
+      {% endfor %}
+    {% else %}
+      <div class="cv-pub-venue"><em>{{ include.pres.venue }}</em>, {{ include.pres.location }}</div>
+    {% endif %}
     <div class="cv-pub-authors">{{ include.pres.authors }}</div>
   </div>
 </div>

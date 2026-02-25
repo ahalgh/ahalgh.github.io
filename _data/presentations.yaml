@@ -20,27 +20,23 @@ poster:
 
   - authors: "Alex Greenhalgh, Dayton Kizzire, David Keffer"
     title: "Modified embedded atom method atomic potential for pure Cerium to facilitate AlCe characterization"
-    venue: "EUReCA Research Poster Contest"
-    location: "Knoxville, TN"
-    date: "April 2023"
-
-  - authors: "Alex Greenhalgh, Dayton Kizzire, David Keffer"
-    title: "Modified embedded atom method atomic potential for pure Cerium to facilitate AlCe characterization"
-    venue: "Center for Materials Processing Student Poster Night"
-    location: "Knoxville, TN"
-    date: "February 2023"
+    venues:
+      - venue: "EUReCA Research Poster Contest"
+        location: "Knoxville, TN"
+        date: "April 2023"
+      - venue: "Center for Materials Processing Student Poster Night"
+        location: "Knoxville, TN"
+        date: "February 2023"
 
   - authors: "Alex Greenhalgh, David Keffer"
     title: "Assessment of Atomic Ordering in Alloys"
-    venue: "ASM International Oak Ridge Chapter Student Poster Night"
-    location: "Knoxville, TN"
-    date: "April 2022"
-
-  - authors: "Alex Greenhalgh, David Keffer"
-    title: "Assessment of Atomic Ordering in Alloys"
-    venue: "ASM International Oak Ridge Chapter Student Poster Night"
-    location: "Knoxville, TN"
-    date: "February 2022"
+    venues:
+      - venue: "ASM International Oak Ridge Chapter Student Poster Night"
+        location: "Knoxville, TN"
+        date: "April 2022"
+      - venue: "ASM International Oak Ridge Chapter Student Poster Night"
+        location: "Knoxville, TN"
+        date: "February 2022"
 
   - authors: "Alex Greenhalgh, Yuanpeng Zhang"
     title: "A New Data Reduction Environment for Neutron Diffraction Data"
