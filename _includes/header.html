@@ -23,15 +23,15 @@
     </div>
   </div>
   <nav class="tab-nav">
-    <a href="/cv" class="tab-btn{% if page.url == '/cv' or page.url == '/cv/' %} tab-active{% endif %}">
+    <a href="/cv" class="tab-btn{% if page.title == 'CV' %} tab-active{% endif %}">
       <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
       CV
     </a>
-    <a href="/research" class="tab-btn{% if page.url == '/research' or page.url == '/research/' or page.layout == 'paper' %} tab-active{% endif %}">
+    <a href="/research" class="tab-btn{% if page.title == 'Research' or page.layout == 'paper' %} tab-active{% endif %}">
       <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19.8 18.4L14 10.67V6.5l1.35-1.69c.26-.33.03-.81-.39-.81H9.04c-.42 0-.65.48-.39.81L10 6.5v4.17L4.2 18.4c-.49.66-.02 1.6.8 1.6h14c.82 0 1.29-.94.8-1.6z"/></svg>
       Research
     </a>
-    <a href="/interests" class="tab-btn{% if page.url == '/interests' or page.url == '/interests/' %} tab-active{% endif %}">
+    <a href="/interests" class="tab-btn{% if page.title == 'Interests' %} tab-active{% endif %}">
       <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
       Interests
     </a>
