@@ -1,10 +1,18 @@
-{% unless page.url == '/' or page.url == '/index.html' %}
-<nav style="text-align:center;padding:10px 0 8px;margin-bottom:4px;font-size:13px;border-bottom:1px solid var(--border-light);display:flex;align-items:center;justify-content:center;gap:12px;">
-  <a href="/">Home</a> &nbsp;/&nbsp;
-  <a href="/cv">CV</a> &nbsp;/&nbsp;
-  <a href="/research">Research</a> &nbsp;/&nbsp;
-  <a href="/interests">Interests</a>
-  <button id="theme-toggle" aria-label="Toggle dark mode"
-    style="background:none;border:1px solid var(--border-color);border-radius:50%;width:28px;height:28px;cursor:pointer;font-size:16px;color:var(--text-color);line-height:1;margin-left:4px;"></button>
+{% if page.url == '/cv' or page.url == '/cv/' %}
+<nav class="tab-nav" style="padding:20px 16px 16px;">
+  <a href="/" class="tab-btn">
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+    Home
+  </a>
+  <a href="/research" class="tab-btn">
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19.8 18.4L14 10.67V6.5l1.35-1.69c.26-.33.03-.81-.39-.81H9.04c-.42 0-.65.48-.39.81L10 6.5v4.17L4.2 18.4c-.49.66-.02 1.6.8 1.6h14c.82 0 1.29-.94.8-1.6z"/></svg>
+    Research
+  </a>
+  <a href="/interests" class="tab-btn">
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    Interests
+  </a>
 </nav>
-{% endunless %}
+{% else %}
+{% include header.html %}
+{% endif %}
