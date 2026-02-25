@@ -1,0 +1,26 @@
+categories:
+  - name: "Personal Interests"
+    items:
+      - id: poetry
+        title: "Poetry"
+        icon: "fas fa-feather-alt"
+        description: "Writing and reading poetry."
+        detail: |
+          <p>A selection of poems and reflections — more coming soon.</p>
+
+      - id: spotify
+        title: "Spotify Playlists"
+        icon: "fab fa-spotify"
+        description: "Curated playlists for every mood."
+        detail: |
+          <p>Check out some of my favorite playlists:</p>
+          <ul>
+            <li><a href="https://open.spotify.com/user/halgh007" target="_blank" rel="noopener">My Spotify Profile</a></li>
+          </ul>
+
+      - id: strava
+        title: "Strava"
+        icon: "fab fa-strava"
+        description: "Running and fitness tracking."
+        detail: |
+          <p>Follow my running activity on <a href="https://www.strava.com/" target="_blank" rel="noopener">Strava</a>.</p>

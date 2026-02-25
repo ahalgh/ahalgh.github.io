@@ -1,19 +1,5 @@
 /* styles/cv.css — mirrors helblazer811.github.io/styles/cv.css */
-
-/* --- Variables --- */
-:root {
-    --text-color: #333;
-    --dark-gray: #4a4a4a;
-    --moon-gray: #ccc;
-    --silver: #999;
-    --blue: #1772d0;
-    --dark-blue: #0f5aa8;
-    --orange: #f09228;
-    --gold: #ffb700;
-    --border-color: #eee;
-    --bg-color: #fff;
-    --mobile-width: 768px;
-}
+/* Variables are defined in index.css :root */
 
 /* --- Main Layout Grid --- */
 /* Analogous to .page-container in the reference.             */
@@ -35,7 +21,7 @@
 /* --- Header --- */
 .cv-grid-header {
     padding-bottom: 14px;
-    border-bottom: 2px solid #222;
+    border-bottom: 2px solid var(--text-color);
     margin-bottom: 4px;
 }
 
@@ -48,7 +34,7 @@
     border-bottom: 1px solid var(--border-color);
     padding-bottom: 0.35rem;
     margin: 1.6rem 0 0.7rem;
-    color: #111;
+    color: var(--text-color);
 }
 
 .cv-subsection-title {

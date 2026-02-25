@@ -1,19 +1,22 @@
 ---
 layout: default
 title: Research
+description: "Publications and research by Alexander Greenhalgh in ML, scientific computing, and operations research."
 ---
 
 <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
   <tr>
     <td style="padding:16px 16px 8px;">
       <h2>Publications</h2>
-      <p style="color:#555;font-size:13px;margin-top:4px;">Click any paper for details.</p>
+      <p class="text-muted" style="font-size:13px;margin-top:4px;">Click any paper for details.</p>
     </td>
   </tr>
   <tr>
     <td style="padding:0 8px 16px;">
       {% for pub in site.data.publications %}
-        {% include paper-tile.html pub=pub %}
+        <div class="animate-on-scroll{% if forloop.index <= 4 %} stagger-{{ forloop.index }}{% endif %}">
+          {% include paper-tile.html pub=pub %}
+        </div>
       {% endfor %}
     </td>
   </tr>

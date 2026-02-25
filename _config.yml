@@ -1,7 +1,8 @@
 title: Alexander Greenhalgh
-description: "PhD Student in Computer Science at Georgia Tech"
+description: "PhD Student in Computer Science at Georgia Tech. Research in ML, scientific computing, and operations research."
 url: "https://ahalgh.github.io"
 baseurl: ""
+image: "/images/Profile_Headshot.jpeg"
 
 author:
   name: Alexander Greenhalgh
