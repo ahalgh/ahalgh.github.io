@@ -1,13 +1,97 @@
 ---
 layout: default
 title: Interests
+fa: true
+description: "Personal interests, playlists, and blog posts by Alexander Greenhalgh."
 ---
 
 <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
   <tr>
     <td style="padding:16px;width:100%;vertical-align:middle">
       <h2>Personal Interests</h2>
-      <p>Coming soon.</p>
+      <p class="text-muted" style="margin-top:4px;font-size:13px;">
+        A few things I enjoy outside of research. Click a card to learn more.
+      </p>
     </td>
   </tr>
 </tbody></table>
+
+<div style="padding:0 16px;">
+  {% for category in site.data.interests.categories %}
+  <div class="interests-category animate-on-scroll">
+    <h3 class="interests-category-title">
+      <i class="{{ category.icon | default: 'fas fa-star' }}"></i> {{ category.name }}
+    </h3>
+    <div class="interests-grid">
+      {% for item in category.items %}
+      <div class="interest-card" data-interest="{{ item.id }}" onclick="toggleInterest('{{ item.id }}')">
+        <div class="interest-card-icon">
+          <i class="{{ item.icon }}"></i>
+        </div>
+        <div class="interest-card-content">
+          <strong>{{ item.title }}</strong>
+          <p>{{ item.description }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% for item in category.items %}
+    <div class="interest-detail" id="detail-{{ item.id }}">
+      <h4>{{ item.title }}</h4>
+      {{ item.detail }}
+    </div>
+    {% endfor %}
+  </div>
+  {% endfor %}
+</div>
+
+<!-- Blog Posts -->
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+  <tr>
+    <td class="animate-on-scroll" style="padding:16px;width:100%;vertical-align:middle">
+      <h2>Blog</h2>
+      <p class="text-muted" style="margin-top:4px;font-size:13px;">
+        Thoughts on research, technology, and more.
+      </p>
+
+      {% assign posts = site.posts %}
+      {% if posts.size > 0 %}
+      <div style="margin-top:12px;">
+        {% for post in posts limit:10 %}
+        <div class="blog-post-item">
+          <a href="{{ post.url }}" class="blog-post-title">{{ post.title }}</a>
+          <span class="blog-post-date">{{ post.date | date: "%b %d, %Y" }}</span>
+          {% if post.excerpt %}
+          <p class="blog-post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+      {% else %}
+      <p style="margin-top:12px;color:var(--text-muted);font-size:13px;">Coming soon.</p>
+      {% endif %}
+    </td>
+  </tr>
+</tbody></table>
+
+<script>
+function toggleInterest(id) {
+  var detail = document.getElementById('detail-' + id);
+  var card = document.querySelector('[data-interest="' + id + '"]');
+  var isActive = detail.classList.contains('active');
+
+  // Close all open details and deactivate cards
+  document.querySelectorAll('.interest-detail.active').forEach(function (el) {
+    el.classList.remove('active');
+  });
+  document.querySelectorAll('.interest-card.active').forEach(function (el) {
+    el.classList.remove('active');
+  });
+
+  // Toggle the clicked one
+  if (!isActive) {
+    detail.classList.add('active');
+    card.classList.add('active');
+  }
+}
+</script>

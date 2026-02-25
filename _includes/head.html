@@ -3,6 +3,22 @@
   <title>{% if page.title and page.title != "Home" %}{{ page.title }} — {% endif %}Alexander Greenhalgh</title>
   <meta name="author" content="Alexander Greenhalgh">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% assign meta_desc = page.description | default: site.description %}
+  <meta name="description" content="{{ meta_desc }}">
+
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}">
+  <meta property="og:description" content="{{ meta_desc }}">
+  <meta property="og:image" content="{{ page.image | default: site.image | prepend: site.url }}">
+  <meta property="og:url" content="{{ page.url | prepend: site.url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.title }}">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}">
+  <meta name="twitter:description" content="{{ meta_desc }}">
+  <meta name="twitter:image" content="{{ page.image | default: site.image | prepend: site.url }}">
+
   <link rel="shortcut icon" href="/images/favicon/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" type="text/css" href="/styles/index.css">
   {% if page.extra_css %}
@@ -11,4 +27,6 @@
   {% if page.fa %}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   {% endif %}
+  <script src="/scripts/theme.js"></script>
+  <script src="/scripts/animations.js" defer></script>
 </head>
