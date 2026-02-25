@@ -1,16 +1,55 @@
+- title: "Tactical LLM Chatbot for Army Doctrine Q&A"
+  date: "2023–2025"
+  description: "Designed and built a retrieval-augmented LLM chatbot in Python for tactical question-and-answer, using LangChain for vector embeddings and the OpenAI API. Training corpus consisted of Army Doctrine Manuals scraped with BeautifulSoup."
+  image: ""
+  github_url: ""
+  demo_url: ""
+  tags:
+    - Python
+    - LangChain
+    - OpenAI API
+    - NLP
+  bullets:
+    - "Retrieval-augmented generation over Army Doctrine Manuals"
+    - "Vector embeddings with LangChain, inference via OpenAI API"
+
 - title: "High-Entropy Alloy Strength Prediction"
   date: "Spring 2023"
+  description: "XGBoost model for joint optimization of yield strength and ductility, trained on an experimental High-Entropy Alloy database. Achieved 90.1% testing accuracy."
+  image: ""
+  github_url: ""
+  demo_url: ""
+  tags:
+    - Python
+    - XGBoost
+    - Materials Science
   bullets:
     - "XGBoost model for joint optimization of yield strength and ductility. Testing accuracy of 90.1%."
     - "Trained on High-Entropy Alloy Database extracted from experimental literature."
 
-- title: "Language Translation Task"
+- title: "Neural Machine Translation: English to German"
   date: "Fall 2023"
+  description: "Implemented LSTM, Seq2Seq, and Transformer architectures in PyTorch for English-to-German translation. Reproduced attention from Vaswani et al.'s Attention Is All You Need. Testing perplexity of 4.81."
+  image: ""
+  github_url: ""
+  demo_url: ""
+  tags:
+    - PyTorch
+    - NLP
+    - Transformers
   bullets:
     - "Implementation of LSTM, Seq2Seq, and Transformer Architectures with PyTorch for English to German Translation Task."
     - "Transformer Attention mechanism from Vaswani et al.'s 'Attention Is All You Need'. Trained on dataset of 31,014 sentences with testing perplexity of 4.81."
 
 - title: "Autonomous AI Algorithms"
   date: "Spring 2024"
+  description: "Implemented A*, PID control, Particle and Kalman Filters, and Simultaneous Localization and Mapping (SLAM)."
+  image: ""
+  github_url: ""
+  demo_url: ""
+  tags:
+    - Python
+    - Robotics
+    - AI
   bullets:
     - "A-star, PID control, Particle/Kalman Filters, Simultaneous Localization and Mapping (SLAM)."
