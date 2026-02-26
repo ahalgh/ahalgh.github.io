@@ -40,7 +40,8 @@ fa: true
       </div>
     </div>
     <p class="cv-statement" style="margin:12px 0 0;font-style:italic;">Machine Learning, Representation Learning, and AI for Decision-Making</p>
-    <p class="cv-statement" style="margin:6px 0 0;">I am a Ph.D. student in Computational Science and Engineering at Georgia Tech, advised by Dr. Polo Chau. My research focuses on machine learning interpretability, representation learning, and visualization. I am particularly interested in how large language models and agent-based systems can be analyzed and improved to enhance transparency, robustness, and decision-making under uncertainty.</p>
+    <p class="cv-statement" style="margin:6px 0 0;">I am a Ph.D. student in Computational Science and Engineering at Georgia Tech, advised by Dr. Polo Chau. My research focuses on machine learning interpretability, representation learning, and visualization.</p>
+    <p class="cv-statement" style="margin:6px 0 0;">I am particularly interested in how large language models and agent-based systems can be analyzed and improved to enhance transparency, robustness, and decision-making under uncertainty.</p>
   </div>
 
   <h2 class="cv-section-title">Education</h2>
