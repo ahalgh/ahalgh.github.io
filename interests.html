@@ -45,7 +45,9 @@ description: "Personal interests, playlists, and blog posts by Alexander Greenha
   {% endfor %}
 </div>
 
-<!-- Blog Posts -->
+<!-- Blog Posts (hidden until posts exist) -->
+{% assign posts = site.posts %}
+{% if posts.size > 0 %}
 <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
   <tr>
     <td class="animate-on-scroll" style="padding:16px;width:100%;vertical-align:middle">
@@ -53,9 +55,6 @@ description: "Personal interests, playlists, and blog posts by Alexander Greenha
       <p class="text-muted" style="margin-top:4px;font-size:13px;">
         Thoughts on research, technology, and more.
       </p>
-
-      {% assign posts = site.posts %}
-      {% if posts.size > 0 %}
       <div style="margin-top:12px;">
         {% for post in posts limit:10 %}
         <div class="blog-post-item">
@@ -67,12 +66,10 @@ description: "Personal interests, playlists, and blog posts by Alexander Greenha
         </div>
         {% endfor %}
       </div>
-      {% else %}
-      <p style="margin-top:12px;color:var(--text-muted);font-size:13px;">Coming soon.</p>
-      {% endif %}
     </td>
   </tr>
 </tbody></table>
+{% endif %}
 
 <script>
 function toggleInterest(id) {
