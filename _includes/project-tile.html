@@ -1,9 +1,9 @@
+{% assign _img = include.proj.image %}
+{% if _img == nil or _img == "" %}{% assign _img = "/images/projects/" | append: include.proj.id | append: ".png" %}{% endif %}
 <div class="project-tile">
-  {% if include.proj.image and include.proj.image != "" %}
   <div class="project-tile-image">
-    <img src="{{ include.proj.image }}" alt="{{ include.proj.title }}" loading="lazy">
+    <img src="{{ _img }}" alt="{{ include.proj.title }}" loading="lazy" onerror="this.parentElement.style.display='none'">
   </div>
-  {% endif %}
   <div class="project-tile-content">
     <div class="project-tile-header">
       <span class="project-tile-title">{{ include.proj.title }}</span>
@@ -18,14 +18,14 @@
     </div>
     {% endif %}
     {% if include.proj.github_url != "" or include.proj.demo_url != "" %}
-    <div class="project-tile-links">
+    <div class="tile-actions">
       {% if include.proj.github_url and include.proj.github_url != "" %}
-      <a href="{{ include.proj.github_url }}" target="_blank" rel="noopener" class="project-link">
+      <a href="{{ include.proj.github_url }}" target="_blank" rel="noopener" class="tile-action-btn">
         <i class="fab fa-github"></i> Code
       </a>
       {% endif %}
       {% if include.proj.demo_url and include.proj.demo_url != "" %}
-      <a href="{{ include.proj.demo_url }}" target="_blank" rel="noopener" class="project-link">
+      <a href="{{ include.proj.demo_url }}" target="_blank" rel="noopener" class="tile-action-btn">
         <i class="fas fa-external-link-alt"></i> Demo
       </a>
       {% endif %}

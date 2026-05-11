@@ -1,14 +1,92 @@
-<a class="paper-tile" href="/papers/{{ include.pub.id }}/">
-  <div class="paper-tile-title">{{ include.pub.title }}</div>
-  <div class="paper-tile-authors">
-    {% for author in include.pub.authors %}
-      {% if author contains "Greenhalgh" %}<strong>{{ author }}</strong>{% else %}{{ author }}{% endif %}{% unless forloop.last %}, {% endunless %}
-    {% endfor %}
+{% assign _img = include.pub.image %}
+{% if _img == nil or _img == "" %}{% assign _img = "/images/papers/" | append: include.pub.id | append: ".png" %}{% endif %}
+<div class="paper-tile">
+  <div class="paper-tile-image">
+    <img src="{{ _img }}" alt="{{ include.pub.title }}" loading="lazy" onerror="this.parentElement.style.display='none'">
   </div>
-  <div class="paper-tile-venue">
-    <em>{{ include.pub.venue }}</em>, {{ include.pub.year }}
-    {% if include.pub.doi != "" %}
-      &nbsp;&bull;&nbsp;DOI: {{ include.pub.doi }}
+  <div class="paper-tile-content">
+    {% if include.pub.venue_tag != "" or include.pub.highlights or include.pub.collaborations %}
+    <div class="paper-tile-badges">
+      {% if include.pub.venue_tag and include.pub.venue_tag != "" %}
+      <span class="paper-tile-tag">{{ include.pub.venue_tag }}</span>
+      {% endif %}
+      {% for hl in include.pub.highlights %}
+      <span class="paper-tile-highlight">
+        {% if hl.icon and hl.icon != "" %}<i class="{{ hl.icon }}"></i>{% endif %}
+        {{ hl.text }}
+      </span>
+      {% endfor %}
+      {% for cl in include.pub.collaborations %}
+      {% if cl.url and cl.url != "" %}
+      <a class="paper-tile-collab" href="{{ cl.url }}" target="_blank" rel="noopener">
+        {% if cl.icon and cl.icon != "" %}<i class="{{ cl.icon }}"></i>{% endif %}
+        {{ cl.text }}
+      </a>
+      {% else %}
+      <span class="paper-tile-collab">
+        {% if cl.icon and cl.icon != "" %}<i class="{{ cl.icon }}"></i>{% endif %}
+        {{ cl.text }}
+      </span>
+      {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+    <a class="paper-tile-title" href="/papers/{{ include.pub.id }}/">{{ include.pub.title }}</a>
+    <div class="paper-tile-authors">
+      {% for author in include.pub.authors %}
+        {% if author contains "Greenhalgh" %}<strong>{{ author }}</strong>{% else %}{{ author }}{% endif %}{% unless forloop.last %}, {% endunless %}
+      {% endfor %}
+    </div>
+    {% if include.pub.summary and include.pub.summary != "" %}
+    <p class="paper-tile-summary">{{ include.pub.summary }}</p>
+    {% endif %}
+
+    <div class="tile-actions">
+      <a class="tile-action-btn" href="/papers/{{ include.pub.id }}/">
+        <i class="fas fa-file-alt"></i> Project
+      </a>
+      {% if include.pub.pdf and include.pub.pdf != "" %}
+      <a class="tile-action-btn" href="{{ include.pub.pdf }}" target="_blank" rel="noopener">
+        <i class="fas fa-file-pdf"></i> PDF
+      </a>
+      {% endif %}
+      {% if include.pub.code and include.pub.code != "" %}
+      <a class="tile-action-btn" href="{{ include.pub.code }}" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i> Code
+      </a>
+      {% endif %}
+      {% if include.pub.data_url and include.pub.data_url != "" %}
+      <a class="tile-action-btn" href="{{ include.pub.data_url }}" target="_blank" rel="noopener">
+        <i class="fas fa-database"></i> Data
+      </a>
+      {% endif %}
+      {% if include.pub.project_url and include.pub.project_url != "" %}
+      <a class="tile-action-btn" href="{{ include.pub.project_url }}" target="_blank" rel="noopener">
+        <i class="fas fa-external-link-alt"></i> Site
+      </a>
+      {% endif %}
+      {% if include.pub.video and include.pub.video != "" %}
+      <a class="tile-action-btn" href="{{ include.pub.video }}" target="_blank" rel="noopener">
+        <i class="fas fa-video"></i> Video
+      </a>
+      {% endif %}
+      {% if include.pub.slides and include.pub.slides != "" %}
+      <a class="tile-action-btn" href="{{ include.pub.slides }}" target="_blank" rel="noopener">
+        <i class="fas fa-file-powerpoint"></i> Slides
+      </a>
+      {% endif %}
+      {% if include.pub.bibtex and include.pub.bibtex != "" %}
+      <button type="button" class="tile-action-btn" onclick="toggleBibtex('{{ include.pub.id }}')">
+        <i class="fas fa-quote-right"></i> BibTeX
+      </button>
+      {% endif %}
+    </div>
+
+    {% if include.pub.bibtex and include.pub.bibtex != "" %}
+    <div class="tile-bibtex-block" id="bibtex-{{ include.pub.id }}">
+      <button type="button" class="tile-copy-btn" onclick="copyBibtex('{{ include.pub.id }}')">Copy</button>
+      <pre id="bibtex-text-{{ include.pub.id }}">{{ include.pub.bibtex }}</pre>
+    </div>
     {% endif %}
   </div>
-</a>
+</div>

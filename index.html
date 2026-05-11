@@ -4,74 +4,46 @@ title: Home
 fa: true
 ---
 
-<!-- About -->
-<div style="padding: 0 16px;">
-  <p>
-    I am a PhD student in Computer Science and Engineering at the <a href="https://www.gatech.edu/">Georgia Institute of Technology</a>, advised by <a href="https://poloclub.github.io/polochau/">Dr. Polo Chau</a>, where I study machine learning, scientific computing, and operations research.
-  </p>
-  <p>
-    Previously, I worked as an Operations Research Analyst at <a href="https://www.army.mil/futures">Army Futures Command</a>, building combat simulation models and LLM-based tools for tactical decision support. I have worked with researchers and engineers at <a href="https://www.gatech.edu/">Georgia Tech</a>, the <a href="https://www.defense.gov/">Department of Defense</a>, <a href="https://www.ornl.gov/">Oak Ridge National Lab</a>, and the <a href="https://tickle.utk.edu/mse/">University of Tennessee</a>.
-  </p>
-</div>
+<!-- Statement -->
+<section class="home-statement">
+  <p class="home-tagline">{{ site.data.personal.tagline }}</p>
+  {% for paragraph in site.data.personal.statement %}
+  <p>{{ paragraph }}</p>
+  {% endfor %}
+</section>
+
+<hr class="section-divider">
 
 <!-- News -->
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-  <tr>
-    <td class="animate-on-scroll" style="padding:16px;width:100%;vertical-align:middle">
-      <h2>News</h2>
-      <ul>
-        <li><strong>Aug. 2025</strong> &mdash; Recipient of the Presidential PhD Fellowship, Georgia Institute of Technology.</li>
-        <li><strong>Apr. 2025</strong> &mdash; Awarded Civilian Service Commendation Medal, Department of the Army.</li>
-        <li><strong>Apr. 2025</strong> &mdash; OMSCS Project Showcase Student's Choice Award Winner.</li>
-        <li><strong>May 2025</strong> &mdash; Completed M.S. in Computer Science at Georgia Tech.</li>
-        <li><strong>Dec. 2024</strong> &mdash; Completed M.Eng. in Industrial Engineering at New Mexico State University.</li>
-      </ul>
-    </td>
-  </tr>
-</tbody></table>
+<section class="home-section">
+  <h2>News</h2>
+  <div class="news-list">
+    {% assign initial_count = 5 %}
+    {% for item in site.data.news %}
+    <div class="news-item{% if forloop.index > initial_count %} is-hidden{% endif %}">
+      <div class="news-date">{{ item.date }}</div>
+      <div class="news-content">{{ item.content }}</div>
+    </div>
+    {% endfor %}
+  </div>
+  {% if site.data.news.size > initial_count %}
+  <div class="news-show-more">
+    <button type="button" class="show-more-btn" data-initial="{{ initial_count }}" data-increment="5" data-shown="{{ initial_count }}" onclick="toggleNewsMore(this)">Show More <span class="show-more-arrow">↓</span></button>
+  </div>
+  {% endif %}
+</section>
 
-<!-- Research -->
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-  <tr>
-    <td class="animate-on-scroll" style="padding:16px;width:100%;vertical-align:middle">
-      <h2>Research</h2>
-      <p>
-        My work spans machine learning, scientific computing, and operations research. I am particularly interested in applying modern ML methods&mdash;including deep learning, optimization, and LLMs&mdash;to problems in materials informatics, autonomous systems, and decision support. Prior work includes developing interatomic potentials for high-entropy alloys via ML optimization, building retrieval-augmented LLM tools for military applications, and constructing predictive models for alloy mechanical properties.
-      </p>
-    </td>
-  </tr>
-</tbody></table>
+<hr class="section-divider">
 
 <!-- Publications -->
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-  <tr>
-    <td style="padding:16px 16px 8px 16px;width:100%;vertical-align:middle">
-      <h2>Publications</h2>
-    </td>
-  </tr>
-</tbody></table>
+<section class="home-section">
+  <h2>Research Highlights</h2>
+  <div class="card-list">
+    {% for pub in site.data.publications %}
+      <div class="animate-on-scroll{% if forloop.index <= 4 %} stagger-{{ forloop.index }}{% endif %}">
+        {% include paper-tile.html pub=pub %}
+      </div>
+    {% endfor %}
+  </div>
+</section>
 
-<div style="padding:0 16px;">
-  {% for pub in site.data.publications %}
-    <div class="animate-on-scroll{% if forloop.index <= 4 %} stagger-{{ forloop.index }}{% endif %}">
-      {% include paper-tile.html pub=pub %}
-    </div>
-  {% endfor %}
-</div>
-
-<!-- Projects -->
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-  <tr>
-    <td style="padding:16px 16px 8px 16px;width:100%;vertical-align:middle">
-      <h2>Projects</h2>
-    </td>
-  </tr>
-</tbody></table>
-
-<div style="padding:0 16px;">
-  {% for proj in site.data.projects %}
-    <div class="animate-on-scroll{% if forloop.index <= 4 %} stagger-{{ forloop.index }}{% endif %}">
-      {% include project-tile.html proj=proj %}
-    </div>
-  {% endfor %}
-</div>

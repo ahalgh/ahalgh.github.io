@@ -10,11 +10,39 @@
     - "Joyner, D.A."
   year: 2026
   venue: "Proceedings of the 57th ACM Technical Symposium on Computer Science Education (SIGCSE TS)"
+  venue_tag: "SIGCSE'26"
+  summary: ""
+  highlights:
+    - icon: "fas fa-award"
+      text: "Oral Presentation"
   details: "February 2026, St. Louis, MO, USA"
   doi: "10.1145/3770762.3772654"
   pdf: "https://dl.acm.org/doi/abs/10.1145/3770762.3772654"
-  abstract: ""
+  abstract: "The flexibility and affordability of online, asynchronous, at-scale degree programs have significantly increased the accessibility of a master's-level graduate education. While studies have been conducted on the general growth of such programs and the quality of the online courses compared to their on-campus counterparts, few (if any) have examined outcomes such as alumni career growth or admission into other graduate programs. This work examines how one large online graduate program in computer science prepared alumni for matriculation into STEM PhD programs. Enrollment data from the National Student Clearinghouse was analyzed to identify key trends in alumni PhD enrollment. Surveys and interviews with program alumni were also conducted to investigate the unique paths that these individuals took to beginning their PhD education. This study finds that the program positively impacted alumni PhD experiences in STEM fields. Alumni noted that involvement with graduate research and coursework were key components in their preparation for a PhD program. These results demonstrate that an affordable, online, asynchronous graduate STEM program can provide non-traditional students with an effective pathway to PhD enrollment. The paper concludes with recommendations for asynchronous, at-scale degree programs seeking to expand their research opportunities for students with a desire to pursue PhD programs."
   image: ""
+  code: ""
+  bibtex: |
+    @inproceedings{10.1145/3770762.3772654,
+      author = {Deng, Patrick and Greenhalgh, Alexander D. and Yu, Brian and Lytle, Nicholas and Joyner, David A.},
+      title = {Exploring Transitions of Graduates From an Online Master's in Computer Science Program to Doctoral Programs},
+      year = {2026},
+      isbn = {9798400722561},
+      publisher = {Association for Computing Machinery},
+      address = {New York, NY, USA},
+      url = {https://doi.org/10.1145/3770762.3772654},
+      doi = {10.1145/3770762.3772654},
+      abstract = {The flexibility and affordability of online, asynchronous, at-scale degree programs have significantly increased the accessibility of a master's-level graduate education. While studies have been conducted on the general growth of such programs and the quality of the online courses compared to their on-campus counterparts, few (if any) have examined outcomes such as alumni career growth or admission into other graduate programs. This work examines how one large online graduate program in computer science prepared alumni for matriculation into STEM PhD programs. Enrollment data from the National Student Clearinghouse was analyzed to identify key trends in alumni PhD enrollment. Surveys and interviews with program alumni were also conducted to investigate the unique paths that these individuals took to beginning their PhD education. This study finds that the program positively impacted alumni PhD experiences in STEM fields. Alumni noted that involvement with graduate research and coursework were key components in their preparation for a PhD program. These results demonstrate that an affordable, online, asynchronous graduate STEM program can provide non-traditional students with an effective pathway to PhD enrollment. The paper concludes with recommendations for asynchronous, at-scale degree programs seeking to expand their research opportunities for students with a desire to pursue PhD programs.},
+      booktitle = {Proceedings of the 57th ACM Technical Symposium on Computer Science Education V.1},
+      pages = {281–287},
+      numpages = {7},
+      keywords = {learning at scale, graduate education, online education, phd pathways},
+      location = {USA},
+      series = {SIGCSE TS 2026}
+    }
+  project_url: ""
+  video: ""
+  slides: ""
+  data_url: ""
 
 - id: cerium-potential
   type: journal
@@ -30,11 +58,31 @@
     - "Keffer, D.J."
   year: 2023
   venue: "Computational Materials Science"
+  venue_tag: "Computational Materials Science '23"
+  summary: ""
   details: "230, article #112454, 2023, pp. 1–9"
   doi: "10.1016/j.commatsci.2023.112454"
   pdf: "https://www.sciencedirect.com/science/article/pii/S0927025623004482"
-  abstract: ""
-  image: ""
+  abstract: "As interest in Cerium containing alloys and Al-Ce alloys in particular grows, the need to generate predictions of mechanical, thermodynamic and transport properties across a compositional space becomes more pronounced. The absence of a reliable interaction potential to be used in classical molecular dynamics (MD) simulation of γ-Ce is a fundamental bottleneck to subsequent alloy simulation. In this work, a Modified Embedded Atom Method (MEAM) potential to be used in MD simulation for γ-Ce has been generated. The parameterization process involved two steps. First, the iterative Latin hypercube sampling (LHS) method was used to generate MEAM parameter sets based on an automated optimization of energies and forces relative to a training set of small configurations evaluated through Density Functional Theory (DFT). Second, a human-guided optimization in that local parameter space was performed to refine the parameters to satisfy an array of mechanical, thermodynamic and transport properties available from the experimental literature. When used in an MD simulation, the resulting potential provides excellent estimates of all tested material properties across a broad temperature range. This γ-Ce potential, when combined with existing MEAM potential for Al, will form the necessary foundation for the subsequent development of a mixture potential, enabling the simulation of Al-Ce and Al-Ce-X alloys."
+  image: "/images/papers/cerium-potential.jpg"
+  code: ""
+  bibtex: |
+    @article{KIZZIRE2023112454,
+      title = {Modified embedded atom method interatomic potential for FCC γ-cerium},
+      journal = {Computational Materials Science},
+      volume = {230},
+      pages = {112454},
+      year = {2023},
+      issn = {0927-0256},
+      doi = {https://doi.org/10.1016/j.commatsci.2023.112454},
+      url = {https://www.sciencedirect.com/science/article/pii/S0927025623004482},
+      author = {Dayton G. Kizzire and Alex D. Greenhalgh and Max L. Neveau and Collin M. Pekol and Michael J. Thompson and Orlando Rios and David J. Keffer},
+      keywords = {Molecular dynamics, Density functional theory, Cerium, Modified embedded atom method, Machine learning, Alloy}
+    }
+  project_url: ""
+  video: ""
+  slides: ""
+  data_url: "https://www.ctcms.nist.gov/potentials/system/Ce/#Ce"
 
 - id: atomic-ordering
   type: journal
@@ -49,11 +97,36 @@
     - "Keffer, D.J."
   year: 2021
   venue: "Frontiers in Materials"
+  venue_tag: "Frontiers in Materials '21"
+  summary: ""
+  highlights:
+    - icon: "fas fa-medal"
+      text: "Poster Finalist"
+  collaborations:
+    - icon: "fas fa-building"
+      text: "ORNL"
+      url: "https://www.ornl.gov/"
   details: "December 2021"
   doi: ""
   pdf: "https://www.frontiersin.org/journals/materials/articles/10.3389/fmats.2021.797418/full"
-  abstract: ""
-  image: ""
+  abstract: "As a powerful analytical technique, atom probe tomography (APT) has the capacity to acquire the spatial distribution of millions of atoms from a complex sample. However, extracting information at the Ångstrom-scale on atomic ordering remains a challenge due to the limits of the APT experiment and data analysis algorithms. The development of new computational tools enable visualization of the data and aid understanding of the physical phenomena such as disorder of complex crystalline structures. Here, we report progress towards this goal using two steps. We describe a computational approach to evaluate atomic ordering in the crystal structure by generating radial distribution functions (RDF). Atomic ordering is rendered as the Fractional Cumulative Radial Distribution Function (FCRDF) which allows for greater visibility of local compositions at short range in the structure. Further, we accommodate in the analysis additional parameters such as uncertainty in the atomic coordinates and the atomic abundance to ascertain short-range ordering in APT data sets. We applied the FCRDF analysis to synthetic and experimental APT data set for Ni3Al. The ability to observe a signal of atomic ordering consistent with the known L12 crystal structure is heavily dependent on spatial uncertainty, irrespective of abundance. Detection of atomic ordering is subject to an upper limit of spatial uncertainty of atoms described with Gaussian distributions with a standard deviation of 1.3 Å. The FCRDF analysis was also applied to the APT data set for a six-component alloy, Al1.3CoCrCuFeNi. In this case, we are currently able to visualize elemental segregation at the nanoscale, though unambiguous identification of atomic ordering at the Ångstrom (nearest-neighbor) scale remains a goal."
+  image: "/images/papers/atomic-ordering.jpg"
+  code: "https://github.com/ahalgh/Fractional_RDF"
+  bibtex: |
+    @article{10.3389/fmats.2021.797418,
+      author  = {Greenhalgh, Alexander D. and Sanjeewa, Liurukara D. and Luszczek, Piotr and Maroulas, Vasileios and Rios, Orlando and Keffer, David J.},
+      title   = {Assessment of Local Observation of Atomic Ordering in Alloys via the Radial Distribution Function: A Computational and Experimental Approach},
+      journal = {Frontiers in Materials},
+      volume  = {8},
+      year    = {2021},
+      url     = {https://www.frontiersin.org/journals/materials/articles/10.3389/fmats.2021.797418},
+      doi     = {10.3389/fmats.2021.797418},
+      issn    = {2296-8016}
+    }
+  project_url: ""
+  video: ""
+  slides: ""
+  data_url: ""
 
 - id: holographic-imaging
   type: journal
@@ -68,8 +141,32 @@
     - "Thomas, C."
   year: 2020
   venue: "Journal of Instrumentation"
+  venue_tag: "JINST'20"
+  summary: ""
+  collaborations:
+    - icon: "fas fa-building"
+      text: "ORNL"
+      url: "https://www.ornl.gov/"
   details: "15(2), C02017, February 2020"
   doi: ""
   pdf: "https://iopscience.iop.org/article/10.1088/1748-0221/15/02/C02017"
-  abstract: ""
-  image: ""
+  abstract: "Digital Holographic (DH) imaging is a laser-based measurement technique, which can be used to monitor a material surface as it is being exposed to fusion-relevant plasmas. Both single-laser and dual-laser DH measurements have been demonstrated ex situ at Oak Ridge National Laboratory (ORNL). A DH diagnostic system is being assessed for deployment at ORNL to make in situ, real-time measurements of plasma erosion/redeposition in the Prototype Material Plasma Exposure eXperiment (Proto-MPEX). In situ, real time measurements pose unique challenges to diagnostic systems, which are not encountered by ex situ analysis techniques. The absolute surface height (tracked at the nm to μm position) during plasma exposure can be modified by: 1) surface movement due to vibration or thrust exerted by the plasma device, 2) surface growth due to the thermal expansion of the material under steady MW/m² or transient GW/m² plasma heat loads, and 3) surface modification due to plasma erosion/redeposition of the material substrate. To assess these effects, 1) the vibration spectrum of the diagnostic and the pulsed plasma device have been measured, 2) the thermal growth of the surface has been measured for an applied heat flux, and 3) the surface modification has been measured ex situ post plasma exposure, and ex situ post laser ablation as a proxy for the plasma. This paper will provide an overview of the results that have been achieved in the development of a DH diagnostic for in situ real-time measurements of plasma exposed surfaces in the Proto-MPEX device."
+  image: "/images/papers/holographic-imaging.jpg"
+  code: ""
+  bibtex: |
+    @article{Biewer_2020,
+      author    = {Biewer, T.M. and Smith, C.D. and Gebhart, T.E. and Greenhalgh, A. and Ren, X. and Thomas, C.E.},
+      title     = {Considerations for in situ, real time measurement of plasma-material interactions using Digital Holographic imaging},
+      journal   = {Journal of Instrumentation},
+      volume    = {15},
+      number    = {02},
+      pages     = {C02017},
+      year      = {2020},
+      month     = {feb},
+      doi       = {10.1088/1748-0221/15/02/C02017},
+      url       = {https://doi.org/10.1088/1748-0221/15/02/C02017}
+    }
+  project_url: ""
+  video: ""
+  slides: ""
+  data_url: ""

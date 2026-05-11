@@ -6,3 +6,8 @@ linkedin: "www.linkedin.com/in/alex-greenhalgh"
 github: "github.com/ahalgh"
 scholar: "https://scholar.google.com/citations?user=-xo876kAAAAJ&hl=en"
 spotify: "https://open.spotify.com/user/halgh007"
+
+tagline: "Machine Learning, Representation Learning, and AI for Decision-Making"
+statement:
+  - 'I am a Ph.D. student in Computational Science and Engineering at Georgia Tech, advised by <a href="https://poloclub.github.io/polochau/">Dr. Polo Chau</a>. My research focuses on machine learning interpretability and visualization, with previous experience in simulation, visualization, and data analysis from working as a military analyst through the Department of Defense <a href="https://www.smartscholarship.org/smart/en">SMART scholarship</a>.'
+  - "I am particularly interested in how large language models and agent-based systems can be analyzed and improved to enhance transparency, robustness, and decision-making under uncertainty."
