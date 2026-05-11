@@ -51,9 +51,11 @@
               {% endfor %}
             </p>
 
+            {% if pub.venue and pub.venue != "" %}
             <p class="paper-page-venue">
               <em>{{ pub.venue }}</em>{% if pub.year %} ({{ pub.year }}){% endif %}
             </p>
+            {% endif %}
 
             <div class="paper-page-actions">
               {% if pub.pdf and pub.pdf != "" %}
