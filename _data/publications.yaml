@@ -10,15 +10,26 @@
     - "Chau, D.H."
   year: 2026
   venue: ""
-  venue_tag: "Under Review"
+  venue_tags:
+    - "arXiv'26"
+    - "Under Review"
   summary: ""
   details: ""
   doi: ""
-  pdf: ""
+  pdf: "https://arxiv.org/abs/2605.11549"
   abstract: "Reinforcement learning has emerged as a dominant technique for fine-tuning the behavior of large language models, with policy optimization (PO) algorithms such as GRPO, DAPO, and Dr. GRPO emerging in rapid succession to advance state-of-the-art reasoning and alignment performance. However, the modular differences between these algorithms, including targeted improvements to clipping, advantage estimation, and reward aggregation, are introduced across separate papers with inconsistent notation, making them difficult to compare and intimidating to the non-expert community. We present UNIPO, the first interactive visualization tool that exposes the token-level training dynamics of RL fine-tuning algorithms through a unified design. UNIPO connects three complementary views — a high-level training overview, a step-level prompt and response inspector, and a side-by-side algorithm comparison — allowing learners to observe how individual design decisions propagate through training. Through two usage scenarios, we demonstrate how UNIPO supports both classroom instruction for non-experts and algorithm selection for AI practitioners. Our tool is open-source and publicly available at https://poloclub.github.io/unipo/."
   image: "/images/papers/unipo.jpg"
   code: ""
-  bibtex: ""
+  bibtex: |
+    @misc{cho2026unipounifiedinteractivevisual,
+      title         = {UNIPO: Unified Interactive Visual Explanation for RL Fine-Tuning Policy Optimization},
+      author        = {Aeree Cho and Alexander D. Greenhalgh and Jonathan Bodea and Anthony Peng and Duen Horng (Polo) Chau},
+      year          = {2026},
+      eprint        = {2605.11549},
+      archivePrefix = {arXiv},
+      primaryClass  = {cs.HC},
+      url           = {https://arxiv.org/abs/2605.11549}
+    }
   project_url: "https://poloclub.github.io/unipo/"
   video: ""
   slides: ""
@@ -36,7 +47,8 @@
     - "Joyner, D.A."
   year: 2026
   venue: "Proceedings of the 57th ACM Technical Symposium on Computer Science Education (SIGCSE TS)"
-  venue_tag: "SIGCSE'26"
+  venue_tags:
+    - "SIGCSE'26"
   summary: ""
   highlights:
     - icon: "fas fa-award"
@@ -84,7 +96,8 @@
     - "Keffer, D.J."
   year: 2023
   venue: "Computational Materials Science"
-  venue_tag: "Computational Materials Science '23"
+  venue_tags:
+    - "Computational Materials Science '23"
   summary: ""
   details: "230, article #112454, 2023, pp. 1–9"
   doi: "10.1016/j.commatsci.2023.112454"
@@ -123,7 +136,8 @@
     - "Keffer, D.J."
   year: 2021
   venue: "Frontiers in Materials"
-  venue_tag: "Frontiers in Materials '21"
+  venue_tags:
+    - "Frontiers in Materials '21"
   summary: ""
   highlights:
     - icon: "fas fa-medal"
@@ -167,7 +181,8 @@
     - "Thomas, C."
   year: 2020
   venue: "Journal of Instrumentation"
-  venue_tag: "JINST'20"
+  venue_tags:
+    - "JINST'20"
   summary: ""
   collaborations:
     - icon: "fas fa-building"

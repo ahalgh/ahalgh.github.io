@@ -16,11 +16,11 @@
               Back to Home
             </a>
 
-            {% if pub.venue_tag != "" or pub.highlights or pub.collaborations %}
+            {% if pub.venue_tags or pub.highlights or pub.collaborations %}
             <div class="paper-tile-badges">
-              {% if pub.venue_tag and pub.venue_tag != "" %}
-              <span class="paper-tile-tag">{{ pub.venue_tag }}</span>
-              {% endif %}
+              {% for vt in pub.venue_tags %}
+              <span class="paper-tile-tag">{{ vt }}</span>
+              {% endfor %}
               {% for hl in pub.highlights %}
               <span class="paper-tile-highlight">
                 {% if hl.icon and hl.icon != "" %}<i class="{{ hl.icon }}"></i>{% endif %}

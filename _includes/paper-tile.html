@@ -5,11 +5,11 @@
     <img src="{{ _img }}" alt="{{ include.pub.title }}" loading="lazy" onerror="this.parentElement.style.display='none'">
   </div>
   <div class="paper-tile-content">
-    {% if include.pub.venue_tag != "" or include.pub.highlights or include.pub.collaborations %}
+    {% if include.pub.venue_tags or include.pub.highlights or include.pub.collaborations %}
     <div class="paper-tile-badges">
-      {% if include.pub.venue_tag and include.pub.venue_tag != "" %}
-      <span class="paper-tile-tag">{{ include.pub.venue_tag }}</span>
-      {% endif %}
+      {% for vt in include.pub.venue_tags %}
+      <span class="paper-tile-tag">{{ vt }}</span>
+      {% endfor %}
       {% for hl in include.pub.highlights %}
       <span class="paper-tile-highlight">
         {% if hl.icon and hl.icon != "" %}<i class="{{ hl.icon }}"></i>{% endif %}
