@@ -100,18 +100,26 @@ fa: true
   </div>
 
   <h2 class="cv-section-title">Publications</h2>
-  <h3 class="cv-subsection-title">Journal Articles</h3>
-  <div class="cv-section-body">
-    {% for pub in site.data.publications %}
-      {% if pub.type == "journal" %}
-        {% include cv/publication.html pub=pub %}
-      {% endif %}
-    {% endfor %}
-  </div>
   <h3 class="cv-subsection-title">Conference Papers</h3>
   <div class="cv-section-body">
     {% for pub in site.data.publications %}
       {% if pub.type == "conference" %}
+        {% include cv/publication.html pub=pub %}
+      {% endif %}
+    {% endfor %}
+  </div>
+  <h3 class="cv-subsection-title">Preprints &amp; Under Review</h3>
+  <div class="cv-section-body">
+    {% for pub in site.data.publications %}
+      {% if pub.type == "preprint" %}
+        {% include cv/publication.html pub=pub %}
+      {% endif %}
+    {% endfor %}
+  </div>
+  <h3 class="cv-subsection-title">Journal Articles</h3>
+  <div class="cv-section-body">
+    {% for pub in site.data.publications %}
+      {% if pub.type == "journal" %}
         {% include cv/publication.html pub=pub %}
       {% endif %}
     {% endfor %}

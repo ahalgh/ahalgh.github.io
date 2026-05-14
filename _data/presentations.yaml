@@ -1,4 +1,10 @@
 oral:
+  - authors: "Greenhalgh, A.D., Deng, P., Yu, B., Lytle, N., Joyner, D.A."
+    title: "Exploring Transitions of Graduates From an Online Master's in Computer Science Program to Doctoral Programs"
+    venue: "57th ACM Technical Symposium on Computer Science Education (SIGCSE TS 2026)"
+    location: "St. Louis, MO"
+    date: "February 2026"
+
   - authors: "Sanjeewa, L.D., Greenhalgh, A., Rios, O., Luszczek, P., Maroulas, V., Keffer, D.J."
     title: "Local Observation of Atomic ordering in Alloys via the Radial Distribution Function: A Computational and Experimental Approach"
     venue: "SIAM Conference on Mathematical Aspects of Materials Science – MS 21"
@@ -14,9 +20,13 @@ oral:
 poster:
   - authors: "Alex Greenhalgh, Kylie Berry, Makenna Curcuru, Jonathan Landry, Baldur Steingrimsson, Peter Liaw"
     title: "Optimization of Refractory High-Entropy Alloy Strength and Ductility through a Predictive Development Process"
-    venue: "International Conference on High-Entropy Materials"
-    location: "Knoxville, TN"
-    date: "June 2023"
+    venues:
+      - venue: "International Conference on High-Entropy Materials"
+        location: "Knoxville, TN"
+        date: "June 2023"
+      - venue: "EUReCA Research Poster Contest"
+        location: "Knoxville, TN"
+        date: "April 2023"
 
   - authors: "Alex Greenhalgh, Dayton Kizzire, David Keffer"
     title: "Modified embedded atom method atomic potential for pure Cerium to facilitate AlCe characterization"
@@ -31,7 +41,7 @@ poster:
   - authors: "Alex Greenhalgh, David Keffer"
     title: "Assessment of Atomic Ordering in Alloys"
     venues:
-      - venue: "ASM International Oak Ridge Chapter Student Poster Night"
+      - venue: "EUReCA Research Poster Contest"
         location: "Knoxville, TN"
         date: "April 2022"
       - venue: "ASM International Oak Ridge Chapter Student Poster Night"
